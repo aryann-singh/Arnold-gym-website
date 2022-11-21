@@ -1,0 +1,112 @@
+h1{
+  color: rgb(233, 208, 64);
+  font-size:50px;
+}
+.nav{
+  overflow: hidden;
+  background-color:none;
+  position: fixed;
+  top: 0;
+  width:100%;
+}
+.nav ul{
+  text-align: center;
+  list-style-type:none;
+  overflow:hidden;
+}
+.lefta
+{
+  float:left ;
+  
+}
+.nav a{
+  float:right;
+  display: block;
+  color: white;
+  text-align:center ;
+  padding: 20px;
+  text-decoration: none;
+  font-size: 40px;
+  background-color:black;
+}
+
+.nav a:hover {
+  background-color:darkblue;
+  text-decoration: overline;
+}
+
+.grid-item ul
+{
+  color: black;
+	margin: right 60px;
+	padding: 0;
+  overflow: hidden;
+  background-color:none;
+  font-family: 'Times New Roman', Times, serif;
+  
+  
+}
+.grid-item li{
+  padding: 10px;
+  font-family: Arial black;
+  font-size: 30px;
+  color: red;
+}
+.grid-item li a
+{   
+  float: left;
+  text-decoration: none;
+  color:white;
+  padding: 5px;
+  margin: auto;
+  font-size: 30px;
+  font-family: arial black;
+  overflow: hidden;
+
+}
+  .grid-item li a:hover
+  {
+    
+  background-color:red;
+  padding: 5px;
+  text-decoration: none;
+  
+  
+  }
+
+.registration
+{
+    padding: 0%;
+    margin-left: 32%;
+    margin-top: 8%;
+  background-color: grey;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  height: 700px;;
+  width: 700px;
+  font-weight: bold;
+  font-size: 28px;
+  
+}
+.tabledata
+{
+  font-size: 20px
+
+}
+h2
+{
+  color: black;
+  font-size: 30px;
+  font-family: 'Times New Roman', Times, serif;
+}
+div form
+{
+  text-align: left;
+  size: 15;
+}
+h3
+{
+color: white;
+font-family: 'Times New Roman', Times, serif;
+font-size: 20px;
+}

@@ -1,0 +1,2907 @@
+<!DOCTYPE html>
+<!-- saved from url=(0027)https://oas.lpu.in/LiveTest -->
+<html class=" js no-flexbox flexbox-legacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio sessionstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <link rel="icon" href="https://oas.lpu.in/favicon.ico" type="image/x-icon">
+    <title>OAS-Lovely Professional University</title>
+    <meta name="description" content="Online Assessment System (OAS) is a web-based solution of Lovely Professional University (LPU) to conduct objective type exams online.">
+
+    
+    <link href="./OAS-Lovely Professional University_files/BootStrapCss" rel="stylesheet">
+
+    <script src="./OAS-Lovely Professional University_files/modernizr"></script>
+
+    <script src="./OAS-Lovely Professional University_files/JqueryVal"></script>
+
+    <script src="./OAS-Lovely Professional University_files/BootStrapJs"></script>
+
+    <script src="./OAS-Lovely Professional University_files/ApiPath.js.download"></script>
+    <link href="./OAS-Lovely Professional University_files/loader.css" rel="stylesheet">
+    <script src="./OAS-Lovely Professional University_files/sweet-alert.js.download"></script>
+    <link href="./OAS-Lovely Professional University_files/sweet-alert.css" rel="stylesheet">
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#nonjavascriptrow").show();
+            $("#javascriptrow").hide();
+            GetUserSessionOutMessage();
+        });
+        function GetUserSessionOutMessage() {
+
+            var LoginId = '12012742';
+
+            var UpdateObj = new Object();
+            UpdateObj.LoginName = LoginId;
+            UpdateObj.DeviceDetails = guid();
+
+            $.ajax({
+                type: "Post",
+                contentType: "application/json; charset=utf-8",
+                url: "api/OnlineExam/UserSessionOutMessage",
+                data: JSON.stringify(UpdateObj),
+                dataType: "json",
+                success: function (data1) {
+                    console.log(data1);
+                    if (data1 == "") {
+                        //alert('Ok');
+                    }
+                    else {
+
+                        swal({
+                            title: "Note",
+                            text: data1,
+                            type: "warning",
+                            showCancelButton: false,
+                            confirmButtonClass: "btn-danger",
+                            confirmButtonText: "OK",
+                            closeOnConfirm: false
+                        },
+                                                    function () {
+                                                        window.location.href = "Home";
+                                                    });
+
+
+                    }
+                },
+                error: function (result) {
+                }
+            });
+
+        }
+        function guid() {
+            var sessionid = 'r1kng0e1bcb3sz0qhdgre52y';
+            return sessionid;
+        }
+
+    </script>
+
+    <style>
+        .outer {
+            display: table;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+        }
+
+        .middle {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .inner {
+            margin-left: auto;
+            margin-right: auto;
+            width: auto;
+        }
+    </style>
+<style type="text/css"></style></head>
+<body style="background-color: #DDDDDD">
+
+    <div class="outer">
+        <div class="middle">
+            <div class="inner">
+
+                <div class="row" id="javascriptrow" style="display: none;">
+                    <div class="col-md-12 col-lg-12 col-sm-12 text-center">
+
+                        <div class="panel panel-danger" style="border: none">
+                            <div class="panel-heading text-left">
+                                <h3>Checking browser properties...</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-md-12 col-lg-12 col-sm-12 text-left">
+                                        <h3>Javascript is Disabled. Please Enable it.</h3>
+                                        <h3>How to Enable Javascript?</h3>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12 col-lg-12 col-sm-12 text-left">
+                                        <div class="panel panel-info">
+                                            <div class="panel-heading text-left">
+                                                <h4>Mozila Firefox</h4>
+                                            </div>
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    <div class="col-md-12 col-lg-12 col-sm-12 text-left">
+                                                        <ol class="list-group">
+                                                            <li class="list-group-item" style="margin-left: 25px; display: list-item; border: none">In the address bar, type about:config and press Enter.</li>
+                                                            <li class="list-group-item" style="margin-left: 25px; display: list-item; border: none">Click "I'll be careful, I promise" if a warning message appears.</li>
+                                                            <li class="list-group-item" style="margin-left: 25px; display: list-item; border: none">In the search box, search for javascript.enabled</li>
+                                                            <li class="list-group-item" style="margin-left: 25px; display: list-item; border: none">Toggle the "javascript.enabled" preference (right-click and select "Toggle" or double-click the preference) to change the value from "false" to "true".</li>
+                                                            <li class="list-group-item" style="margin-left: 25px; display: list-item; border: none">Click on the "Reload current page" button of the web browser to refresh the page.</li>
+                                                        </ol>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12 col-lg-12 col-sm-12 text-left">
+                                        <div class="panel panel-info">
+                                            <div class="panel-heading text-left">
+                                                <h4>Internet Explorer</h4>
+                                            </div>
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    <div class="col-md-12 col-lg-12 col-sm-12 text-left">
+                                                        <ol class="list-group">
+                                                            <li class="list-group-item" style="margin-left: 25px; display: list-item; border: none">On web browser menu click "Tools" icon and select "Internet Options".</li>
+                                                            <li class="list-group-item" style="margin-left: 25px; display: list-item; border: none">In the "Internet Options" window select the "Security" tab.</li>
+                                                            <li class="list-group-item" style="margin-left: 25px; display: list-item; border: none">On the "Security" tab click on the "Custom level..." button.</li>
+                                                            <li class="list-group-item" style="margin-left: 25px; display: list-item; border: none">When the "Security Settings - Internet Zone" dialog window opens, look for the "Scripting" section.</li>
+                                                            <li class="list-group-item" style="margin-left: 25px; display: list-item; border: none">In the "Active Scripting" item select "Enable".</li>
+                                                            <li class="list-group-item" style="margin-left: 25px; display: list-item; border: none">When the "Warning!" window pops out asking "Are you sure you want to change the settings for this zone?" select "Yes".</li>
+                                                            <li class="list-group-item" style="margin-left: 25px; display: list-item; border: none">In the "Internet Options" window click on the "OK" button to close it.</li>
+                                                            <li class="list-group-item" style="margin-left: 25px; display: list-item; border: none">Click on the "Refresh" button of the web browser to refresh the page.</li>
+                                                        </ol>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12 col-lg-12 col-sm-12 text-left">
+                                        <div class="panel panel-info">
+                                            <div class="panel-heading text-left">
+                                                <h4>Google Chrome</h4>
+                                            </div>
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    <div class="col-md-12 col-lg-12 col-sm-12 text-left">
+                                                        <ol class="list-group">
+                                                            <li class="list-group-item" style="margin-left: 25px; display: list-item; border: none">On the web browser menu click on the "Customize and control Google Chrome" and select "Settings".</li>
+                                                            <li class="list-group-item" style="margin-left: 25px; display: list-item; border: none">In the "Settings" section click on the "Show advanced settings..."</li>
+                                                            <li class="list-group-item" style="margin-left: 25px; display: list-item; border: none">Under the the "Privacy" click on the "Content settings...".</li>
+                                                            <li class="list-group-item" style="margin-left: 25px; display: list-item; border: none">When the dialog window opens, look for the "JavaScript" section and select "Allow all sites to run JavaScript (recommended)".</li>
+                                                            <li class="list-group-item" style="margin-left: 25px; display: list-item; border: none">Click on the "OK" button to close it.</li>
+                                                            <li class="list-group-item" style="margin-left: 25px; display: list-item; border: none">Close the "Settings" tab.</li>
+                                                            <li class="list-group-item" style="margin-left: 25px; display: list-item; border: none">Click on the "Reload this page" button of the web browser to refresh the page.</li>
+                                                        </ol>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                
+
+                                <div class="row">
+                                    <div class="col-md-12 col-lg-12 col-sm-12 text-left">
+                                        <div class="panel panel-info">
+                                            <div class="panel-heading text-left">
+                                                <h4>Apple Safari</h4>
+                                            </div>
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    <div class="col-md-12 col-lg-12 col-sm-12 text-left">
+                                                        <ol class="list-group">
+                                                            <li class="list-group-item" style="margin-left: 25px; display: list-item; border: none">On the web browser menu click on the "Edit" and select "Preferences".</li>
+                                                            <li class="list-group-item" style="margin-left: 25px; display: list-item; border: none">In the "Preferences" window select the "Security" tab.</li>
+                                                            <li class="list-group-item" style="margin-left: 25px; display: list-item; border: none">In the "Security" tab section "Web content" mark the "Enable JavaScript" checkbox.</li>
+                                                            <li class="list-group-item" style="margin-left: 25px; display: list-item; border: none">Click on the "Reload the current page" button of the web browser to refresh the page.</li>
+                                                        </ol>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div id="nonjavascriptrow" style="height: 100%;">
+                    
+
+<script src="./OAS-Lovely Professional University_files/jquery.timer.js.download"></script>
+<script src="./OAS-Lovely Professional University_files/jquery.demo.js.download"></script>
+<script src="./OAS-Lovely Professional University_files/sweet-alert.js.download"></script>
+<link href="./OAS-Lovely Professional University_files/sweet-alert.css" rel="stylesheet">
+<link href="./OAS-Lovely Professional University_files/ladda-themeless.min.css" rel="stylesheet">
+<script src="./OAS-Lovely Professional University_files/spin.min.js.download"></script>
+<script src="./OAS-Lovely Professional University_files/ladda.min.js.download"></script>
+<link href="./OAS-Lovely Professional University_files/BlinkStyle.css" rel="stylesheet">
+    <script src="./OAS-Lovely Professional University_files/knockout-2.1.0.js.download"></script>
+    <script src="./OAS-Lovely Professional University_files/checkInternetConnectivity.js.download"></script>
+<style type="text/css">
+    .navbar {min-height:56px;}
+
+    .modal__header,
+    .modal__footer {
+        height: 0px;
+    }
+
+    .modal__content,
+    .modal__footer {
+        position: absolute;
+        width: 100%;
+    }
+
+    .modal__content {
+        bottom: 100px;
+        top: 0px;
+        overflow-y: auto;
+    }
+
+    .modal__footer {
+        bottom: 0;
+    }
+
+
+    body {background:#fff!important;}
+    /*.scroll-test {height:500px; overflow-y:scroll;}*/
+    .middle {display:table-cell; vertical-align:top; padding-top:15px;}
+
+    .navbar-nav > li > a {padding-top:18px;}
+    .navbar-nav {margin:0;}
+    .time-right {float:right;}
+    .time-remaining {
+        font-size: 20px;
+        font-weight: normal;
+        color: #D35400;
+        padding: 15px 0;
+        display: inline-block;
+    }
+    .time-show {
+        font-size: 22px;
+        font-weight: normal;
+        color: #D35400;
+        padding: 8px 12px;
+        border: 1px solid #D35400;
+        border-radius: 6px;
+        margin-right: 15px;
+    }
+
+    .pre-btn {border-radius: 4px; color: #fff; background-color: #00b279; padding: 10px 20px; margin: 15px 0; display: inline-block;}
+    .pre-btn:hover {color: #fff; text-decoration:none;}
+    .flag-btn {border-radius: 4px; color: #fff; background-color: #F0AD4E; padding: 10px 20px; margin: 15px 0; display: inline-block;}
+    .flag-btn:hover {color: #fff; text-decoration:none;}
+    .next-btn {border-radius: 4px; color: #fff; background-color: #00b279; padding: 10px 20px; margin: 15px 0; display: inline-block;}
+    .next-btn:hover {color: #fff; text-decoration:none;}
+    .end-btn {border-radius: 4px; color: #fff; background-color: #D9534F; padding: 10px 20px; margin: 15px 0; display: inline-block;}
+    .end-btn:hover {color: #fff; background-color: #D9534F!important; text-decoration:none;}
+
+
+    @media screen and (max-width:768px) {
+    .time-right {float:left;}
+    .pre-btn {padding:5px 10px;}
+    .flag-btn {padding:5px 10px;}
+    .next-btn {padding:5px 10px;}
+    .end-btn {padding:5px 12px!important;}
+
+    .test-hide {
+        display:none!important;
+    }
+
+    .time-remaining {position: fixed; right: 18%; top: 2px; font-size:14px;}
+    .time-show {font-size:18px; padding: 2px 4px; border-radius: 4px; position: fixed; left: 83%; top: 11px;}
+    .btn-size {padding:4px 8px;}
+    .badge {padding:3px 6px;}
+    
+    }
+
+
+
+
+    * {
+        color: #333333;
+        font-family: 'Slabo 27px', serif;
+    }
+
+    #wrapper {
+        min-height: 100%;
+        height: 90%;
+        width: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0;
+        display: inline-block;
+        background-color: white;
+        padding-bottom: 4%;
+    }
+
+
+    #main-wrapper {
+        height: 100%;
+        overflow-y: auto;
+        padding: 5px 0 0px 0;
+    }
+
+    #main {
+        position: relative;
+        height: 100%;
+        overflow-y: auto;
+        padding: 0 15px;
+    }
+
+    .TIrowBottom {
+        margin-bottom: 5px;
+    }
+
+    .PItextColor {
+    }
+
+    .PItextColorHeading {
+        color: #D35400;
+        font-family: 'Oswald';
+    }
+
+    body {
+        padding-top: 50px;
+        overflow: hidden;
+    }
+
+
+
+
+    #sidebar-wrapper {
+        height: 100%;
+        padding: 50px 0 0px 0;
+        position: fixed;
+        border-right: 1px solid gray;
+    }
+
+    #sidebar {
+        position: relative;
+        height: 100%;
+        overflow: hidden;
+    }
+
+        #sidebar .list-group-item {
+            border-radius: 0;
+            border-left: 0;
+            border-right: 0;
+            border-top: 0;
+        }
+
+    .footer {
+        background-color: #ffffff;
+        bottom: 0;
+        position: fixed;
+        padding: 10px;
+    }
+
+    .badgeClass {
+        background-color: white;
+        border: 1px solid #d35400;
+        border-radius: 5px;
+        color: #d35400;
+        cursor: pointer;
+        font-size: 13px;
+        margin-top: 0px;
+        padding: 5px;
+        width: 46px;
+    }
+
+    .badgeClassSelected {
+        background-color: #D9EDF7;
+        border: 1px solid #828282;
+        border-radius: 5px;
+        color: black;
+        cursor: pointer;
+        font-size: 13px;
+        margin-top: 0px;
+        padding: 5px;
+        width: 46px;
+        /*-webkit-animation: blink 700ms infinite alternate;
+        -moz-animation: blink 700ms infinite alternate;
+        -o-animation: blink 700ms infinite alternate;
+        animation: blink 700ms infinite alternate;*/
+    }
+
+    .badgeClassFlag {
+        border: 1px solid #F0AD4E;
+        background-color: #F0AD4E;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+        font-size: 13px;
+        margin-top: 0px;
+        padding: 5px;
+        width: 46px;
+    }
+
+    .badgeClassAnswered {
+        border: 1px solid #00b279;
+        background-color: #00b279;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+        font-size: 13px;
+        margin-top: 0px;
+        padding: 5px;
+        width: 46px;
+    }
+
+    .QuestionNosCol {
+        background-color: #F8F8F8;
+        border-radius: 5px;
+        margin: 5px;
+        height: 250px;
+        margin-top: 10px;
+        padding-left: 5px;
+        overflow-y: scroll;
+    }
+
+    .QuestionNoClass span {
+        color: #CE4844;
+        font-size: 15px;
+        margin-top: 13px;
+        padding-top: 5px;
+        font-weight: bold;
+    }
+
+    .LegendHeader {
+        color: brown;
+        margin-left: 6px;
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 0px;
+        padding-bottom: 4px;
+    }
+
+    .bs-callout + .bs-callout {
+        margin-top: -5px;
+    }
+
+    .bs-callout {
+        -moz-border-bottom-colors: none;
+        -moz-border-left-colors: none;
+        -moz-border-right-colors: none;
+        -moz-border-top-colors: none;
+        border-color: #eee;
+        border-image: none;
+        border-radius: 3px;
+        border-style: solid;
+        border-width: 1px 1px 1px 5px;
+        margin: 2px 0;
+        padding: 20px;
+        margin-top: 20px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .bs-callout-info {
+        border-left-color: #1B809E;
+    }
+
+    .bs-callout-danger {
+        border-left-color: #D9534F;
+    }
+
+    .bs-callout-warning {
+        border-left-color: #AA6708;
+    }
+
+    .bs-callout-success {
+        border-left-color: green;
+    }
+
+    .bs-callout-danger h4 {
+        color: #D9534F;
+        vertical-align: middle;
+        font-size: 1em;
+        padding-bottom: 5px;
+        border-bottom: 2px solid #D9534F;
+    }
+
+    .Sectionheader {
+        color: #D9534F !important;
+        vertical-align: middle !important;
+        font-size: 1em !important;
+        padding-bottom: 1px !important;
+        border-bottom: 2px solid #D9534F !important;
+        margin-top: 5px !important;
+    }
+
+    .bs-callout-info h4 {
+        color: #1B809E;
+        vertical-align: middle;
+        font-size: 1em;
+        padding-bottom: 5px;
+        border-bottom: 2px solid #1B809E;
+    }
+
+    .bs-callout-warning h4 {
+        color: #AA6708;
+        vertical-align: middle;
+        font-size: 1em;
+        padding-bottom: 5px;
+        border-bottom: 2px solid #AA6708;
+    }
+
+    .bs-callout-success h4 {
+        color: green;
+        vertical-align: middle;
+        font-size: 1em;
+        padding-bottom: 5px;
+        border-bottom: 2px solid green;
+    }
+
+
+    .bs-callout h4 {
+        margin-bottom: 5px;
+        margin-top: 0;
+        text-align: left;
+        vertical-align: middle;
+        font-size: 1em;
+        margin-top: 0;
+    }
+
+    .bs-callout p {
+        text-align: center;
+        word-break: break-all;
+    }
+
+    .QuestionDescription > * {
+        color: #1B809E;
+    }
+
+    .AttemptStatusSpan {
+        position: absolute !important;
+        background-color: #F8F8F8 !important;
+        color: #D35400 !important;
+        border: 1px solid #D35400;
+        top: -4px !important;
+    }
+
+    .AttemptStatusButton {
+        font-size: 12px;
+    }
+
+    /*.sweet-overlay
+    {
+        background-color: rgba(0, 0, 0, 0.4);
+        bottom: 0;
+        display: block;
+        left: 0;
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 10000;
+        opacity: 1.16;
+    }
+
+    .showSweetAlert[data-animation="pop"]
+    {
+        animation: 0.3s ease 0s normal none 1 running showSweetAlert;
+    }
+
+    .sweet-alert
+    {
+        background-color: white;
+        border-radius: 0;
+        display: none;
+        font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+        left: 50%;
+        margin-left: -216px;
+        margin-top: -200px;
+        overflow: hidden;
+        padding: 10px;
+        position: fixed;
+        text-align: center;
+        top: 50%;
+        width: 350px;
+        z-index: 99999;
+    }*/
+    .ladda-label {
+        color: white !important;
+    }
+</style>
+<script src="./OAS-Lovely Professional University_files/checkDeviceType.js.download"></script>
+<script type="text/javascript">
+    var TestId = "0";
+    var Set = "0";
+    var LoginId = "";
+    var startTime;
+
+    $(document).ready(function () {
+        
+        $("#Name").html("");
+        if (sessionStorage.Name == "")
+        {
+            $("#Name").html(sessionStorage.UserName);
+        }
+        else {
+            $("#Name").html(sessionStorage.Name + " , " + sessionStorage.UserName);  //Display name of user and Login Id
+        }
+        SaveNavigationDetails();   // To record interface access
+        //Example2.cal("2700000");
+        $("#TestInstructionsContent").html(sessionStorage.Instructions);
+        $("#checkBoxRow").hide();
+        if (sessionStorage.TestId == "") {
+            document.write("Page is Not available");
+        }
+        else {
+            if (sessionStorage.AllowQuestionNavigation == 'false') {
+                $("#btnPrev").hide();
+                $("#btnFlag").hide();
+                $("#btnNext").hide();
+                $("#FlaggedCountIcon").hide();
+                $("#FlaggedStatus").hide();
+                $("#FlaggedCountDetail").hide();
+            }
+            else {
+                $("#btnPrev").show();
+                $("#btnFlag").show();
+                $("#btnNext").show();
+                $("#FlaggedCountIcon").show();
+                $("#FlaggedStatus").show();
+                $("#FlaggedCountDetail").show();
+            }
+            $(document).bind("cut copy paste", function (e) {
+                e.preventDefault();
+            });
+
+            $(document).on("contextmenu", function () {
+                return false;
+            });
+
+
+            //$('input .fbanswer').on('keypress', function (e) {
+            //$("#optionCol").find('input[type="text"]')
+            //$('input .fbanswer').on('keypress', function (e) {
+            //    if (e.which == 32)
+            //        return false;
+            //});
+
+
+            $("#UserName").html(sessionStorage.UserName);
+            $("#TestName").html(sessionStorage.TestName);
+            TestId = sessionStorage.TestId;
+            Set = sessionStorage.Set;
+            LoginId = '12012742';
+
+            DisplayTime(); //Test Time to display when user start the test
+            SaveTime();
+            GetQuestionNumbersDetail();
+
+            if (sessionStorage.IsRedirect != "1")
+            {
+                sessionStorage.TestId = "";
+                sessionStorage.Set = "";
+                sessionStorage.TestName = "";
+                localStorage.setItem("QuestionIndex", "");
+            }
+        }
+
+
+    });
+
+    function keyfilter(e) {
+        var code = ('charCode' in e) ? e.charCode : e.keyCode;
+        if (//!(code == 32) && // space
+            !(code > 47 && code < 58) && // numeric (0-9)
+            !(code > 64 && code < 91) && // upper alpha (A-Z)
+            !(code > 96 && code < 123)) { // lower alpha (a-z)
+            e.preventDefault();
+        }
+
+    }
+
+    function keyfilterRange(e) {
+        var code = ('charCode' in e) ? e.charCode : e.keyCode;
+        if (//!(code == 32) && // space
+            !(code > 47 && code < 58) //&& // numeric (0-9)
+           // !(code > 64 && code < 91) && // upper alpha (A-Z)
+           // !(code > 96 && code < 123)
+        ) { // lower alpha (a-z)
+            e.preventDefault();
+        }
+
+    }
+
+    function validateFloatKeyPress(el, evt) {
+        var charCode = (evt.which) ? evt.which : event.keyCode;
+        var number = el.value.split('.');
+        if (charCode != 46 && charCode > 31 && (charCode < 48 || charCode > 57)) {
+            return false;
+        }
+        //just one dot
+        if (number.length > 1 && charCode == 46) {
+            return false;
+        }
+        //get the carat position
+        var caratPos = getSelectionStart(el);
+        var dotPos = el.value.indexOf(".");
+        if (caratPos > dotPos && dotPos > -1 && (number[1].length > 1)) {
+            return false;
+        }
+        return true;
+    }
+    
+    function getSelectionStart(o) {
+        if (o.createTextRange) {
+            var r = document.selection.createRange().duplicate()
+            r.moveEnd('character', o.value.length)
+            if (r.text == '') return o.value.length
+            return o.value.lastIndexOf(r.text)
+        } else return o.selectionStart
+    }
+
+
+
+
+
+
+
+
+
+    function SaveNavigationDetails()
+    {
+        var LoginId = '12012742';
+        var navigationURL = window.location.pathname;
+        var browserName = WURFL.complete_device_name;
+
+        var DeviceType = "";
+
+        if (WURFL.form_factor === "Smartphone") {
+            DeviceType = "SmartPhone";
+        }
+        else if (WURFL.form_factor === "Desktop") {
+            DeviceType = "Desktop";
+        }
+        else if (WURFL.form_factor === "Tablet") {
+            DeviceType = "Tablet";
+        }
+        else {
+            DeviceType = "others";
+        }
+        var DeviceDetails = browserName + " :: " + DeviceType;
+
+        var LogObject = new Object();
+        LogObject.LoginName = LoginId;
+        LogObject.NavigationURL = navigationURL;
+        LogObject.DeviceDetails = DeviceDetails;
+
+        $.ajax({
+            type: "Post",
+            contentType: "application/json; charset=utf-8",
+            //url: "./api/OnlineExam/SaveLogDetails",
+            url: '/api/OnlineExam/SaveLogDetails',
+            data: JSON.stringify(LogObject),
+            datatype: "json",
+            success: function (data1) {
+                if (data1.d == undefined) {
+
+                }
+                else {
+                    data1 = data1.d;
+                }
+                if (data1.indexOf("Error") != -1) {
+                }
+            }, error: function (data) {
+            }
+        });
+
+    }
+
+    function GetTotalWarnings()
+    {
+        var TWObj = new Object();
+        TWObj.TestId = TestId;
+
+        $.ajax({
+            type: "GET",
+            contentType: "application/json; charset=utf-8",
+            //url: "./api/OnlineExam/GetTotalWarnings",
+            url: '/api/OnlineExam/GetTotalWarnings',
+            dataType: "JSON",
+            data: TWObj,
+            success: function (data1) {
+                $("#totalWarnings").val(data1);
+
+            },
+            error: function (result)
+            {
+                console.log(result.responseText);
+            }
+
+        });
+    }
+
+    //document.onkeypress = function (event) {
+    //    return false;
+    //}
+    //document.onmousedown = function (event) {
+    //    return false;
+    //}
+    //document.onkeydown = function (event) {
+    //    return false;
+    //}
+
+
+    $(function () {
+
+        $(window).blur(function () {
+            var l = '12012742';
+            var warning = "";
+            var TotalWarnings = "";
+            
+            var data = new FormData();
+            var _0x5c30 = ["\x38\x30\x38\x30\x38\x30\x38\x30\x38\x30\x38\x30\x38\x30\x38\x30", "\x70\x61\x72\x73\x65", "\x55\x74\x66\x38", "\x65\x6E\x63", "\x74\x72\x69\x6D", "\x43\x42\x43", "\x6D\x6F\x64\x65", "\x50\x6B\x63\x73\x37", "\x70\x61\x64", "\x65\x6E\x63\x72\x79\x70\x74", "\x41\x45\x53"]; var key = CryptoJS[_0x5c30[3]][_0x5c30[2]][_0x5c30[1]](_0x5c30[0]); var iv = CryptoJS[_0x5c30[3]][_0x5c30[2]][_0x5c30[1]](_0x5c30[0]); var t = CryptoJS[_0x5c30[10]][_0x5c30[9]](CryptoJS[_0x5c30[3]][_0x5c30[2]][_0x5c30[1]](TestId[_0x5c30[4]]()), key, { keySize: 128 / 8, iv: iv, mode: CryptoJS[_0x5c30[6]][_0x5c30[5]], padding: CryptoJS[_0x5c30[8]][_0x5c30[7]] }); var ol = CryptoJS[_0x5c30[10]][_0x5c30[9]](CryptoJS[_0x5c30[3]][_0x5c30[2]][_0x5c30[1]](l[_0x5c30[4]]()), key, { keySize: 128 / 8, iv: iv, mode: CryptoJS[_0x5c30[6]][_0x5c30[5]], padding: CryptoJS[_0x5c30[8]][_0x5c30[7]] }); 
+            data.append("Identifierl", ol);
+            data.append("Identifiert", t);
+
+
+
+
+            $.ajax({
+                type: "Post",
+                contentType: "application/json; charset=utf-8",
+                url: '/api/OnlineExam/GetTestWarningDetail',
+                //dataType: "json",
+                //data: WarningObj,
+                data: data,
+                contentType: false,
+                processData: false,
+                success: function (data1) {
+                   // alert(data1);
+                    TotalWarnings = parseInt(data1[0].TotalWarnings);
+                    warning = parseInt(data1[0].warningCount);
+                    warning++;
+                   // alert(TotalWarnings+' '+ warning);
+                    if (parseInt(warning) < parseInt(TotalWarnings)) {
+                        swal("Warning", "Test Warning " + warning + " : During the Test You are not allowed to Navigate to any Other Window, Your Test Will be closed and auto submitted.", "error");
+                        saveWarning();
+                    }
+                    else if (parseInt(warning) == parseInt(TotalWarnings)) {
+                       saveWarning();
+                        swal("Warning", "Final Warning, Test Warning " + warning + " : After this attempt, Test Will be closed and auto Submitted", "error");
+                    }
+                    else if (parseInt(warning) > parseInt(TotalWarnings)) {
+                        //HideWarning();
+
+                        saveWarning();
+
+                        var QuestionId = $("#QuestionRow").find('input[type="hidden"]').val();
+
+                        var Span = $("#QuestionNos").find("span[data-questionid='" + QuestionId + "']");
+                        if (Span.data('isflag') == 'True') {
+                            SaveTestResponse('Flagged', document.getElementById('endTest'));
+                        }
+                        else {
+                            SaveTestResponse('NotFlagged', document.getElementById('endTest'));
+                        }
+
+                        EndTest("false");
+                       
+                    }
+                    
+                },
+                error: function (result) {
+                    console.log(result.responseText);
+                }
+            });
+
+            function saveWarning() {
+                //if (parseInt(sessionStorage.Warning) > 0 && TestWarningObj.WarningNumber != sessionStorage.Warning) {
+                var l = '12012742';
+                var data = new FormData();
+                var _0x5c30 = ["\x38\x30\x38\x30\x38\x30\x38\x30\x38\x30\x38\x30\x38\x30\x38\x30", "\x70\x61\x72\x73\x65", "\x55\x74\x66\x38", "\x65\x6E\x63", "\x74\x72\x69\x6D", "\x43\x42\x43", "\x6D\x6F\x64\x65", "\x50\x6B\x63\x73\x37", "\x70\x61\x64", "\x65\x6E\x63\x72\x79\x70\x74", "\x41\x45\x53"]; var key = CryptoJS[_0x5c30[3]][_0x5c30[2]][_0x5c30[1]](_0x5c30[0]); var iv = CryptoJS[_0x5c30[3]][_0x5c30[2]][_0x5c30[1]](_0x5c30[0]); var t = CryptoJS[_0x5c30[10]][_0x5c30[9]](CryptoJS[_0x5c30[3]][_0x5c30[2]][_0x5c30[1]](TestId[_0x5c30[4]]()), key, { keySize: 128 / 8, iv: iv, mode: CryptoJS[_0x5c30[6]][_0x5c30[5]], padding: CryptoJS[_0x5c30[8]][_0x5c30[7]] }); var ol = CryptoJS[_0x5c30[10]][_0x5c30[9]](CryptoJS[_0x5c30[3]][_0x5c30[2]][_0x5c30[1]](l[_0x5c30[4]]()), key, { keySize: 128 / 8, iv: iv, mode: CryptoJS[_0x5c30[6]][_0x5c30[5]], padding: CryptoJS[_0x5c30[8]][_0x5c30[7]] }); var ww = warning; 
+                
+                data.append("Identifierl", ol);
+                data.append("Identifierw", ww);
+                data.append("Identifiert", t);
+                
+                $.ajax({
+                    type: "Post",
+                    contentType: "application/json; charset=utf-8",
+                    //url: "./api/OnlineExam/TestWarningDetail",
+                    url: '/api/OnlineExam/TestWarningDetail',
+                    //data: JSON.stringify(TestWarningObj),
+                    data: data,
+                    contentType: false,
+                    processData: false,
+                    //datatype: "json",
+                    success: function (data1) {
+                        if (data1.d == undefined) {
+
+                        }
+                        else {
+                            data1 = data1.d;
+                        }
+                        if (data1.indexOf("Error") != -1) {
+                            swal("Error", "An error has occured during warning.Please try again Later", "error");
+                        }
+                    }, error: function (data) {
+                        console.log(data.responseText);
+                    }
+                });
+
+                //}
+            }
+
+            $(window).focus();
+           
+        });
+    });
+
+
+    function GetQuestionNumbersDetail()
+    {
+
+        $("#QuestionNos").html("");
+        var Unattemped = 0;
+        var Attempted = 0;
+        var Flagged = 0;
+        //var AttemptedFrontEndCount = 0;
+        //var UnAttemptedFrontEndCount = 0;
+
+        var TestDetailObj = new Object();
+        TestDetailObj.TestId = TestId;
+        TestDetailObj.Set = Set;
+        TestDetailObj.LoginId = LoginId;
+
+        var html = "";
+        html += "<div class='QuestionNosCol'>";
+        $.ajax({
+            type: "Get",
+            contentType: "application/json; charset=utf-8",
+            //url: "./api/OnlineExam/GetQuestionNumbersDetail",
+            url: '/api/OnlineExam/GetQuestionNumbersDetail',
+            data: TestDetailObj,
+            dataType: "json",
+            success: function (data1) {
+                if (data1.d == undefined)
+                {
+
+                }
+                else
+                {
+                    data1 = data1.d;
+                }
+
+                if (data1[0].QuestionNo == "No Record Found" || data1[0].QuestionNo.indexOf("Error") != -1)
+                {
+                    console.log(data1[0].QuestionNo);
+                }
+                else {
+                    if (data1.length > 0)
+                    {
+
+                        //Check Last unattempted question////
+                        for (var i = 0; i < data1.length; i++)
+                        {
+                            //Lakhwinder Testing
+                            //alert("Option ID:" + data1[i].OptionId);
+                            //alert("Question No." + data1[i].QuestionNo);
+                            //alert("Answer: " + data1[i].AnswerText);
+                            //alert(localStorage.getItem('QuestionIndex'));
+                            if (data1[i].OptionId == "" && data1[i].AnswerText == "")
+                            {
+                                localStorage.setItem('QuestionIndexFirst', data1[i].QuestionNo);
+                                if (localStorage.getItem('QuestionIndex') =="")
+                                    saveQuestionIndex(data1[i].QuestionNo);
+                                break;
+                            }
+                        }
+                        ///End of Check Last unattempted question////
+
+                        /// Count attempted and unattempted questions////
+                        for (var i = 0; i < data1.length; i++)
+                        {
+                            if (data1[i].OptionId == "")
+                            {
+                                //Unattemped++;
+                                if (data1[i].AnswerText == "") {
+                                    Unattemped++;
+                                }
+                                else {
+                                    Attempted++;
+                                }
+                            }
+                            else {
+                                Attempted++;
+                            }
+
+                            if (data1[i].IsFlagged == "True") {
+                                Flagged++;
+                            }
+                        }
+                        $("#UnattemptedSpan").html(Unattemped);
+                        $("#AttemptedSpan").html(Attempted);
+                        $("#FlaggedSpan").html(Flagged);
+                        /// End of Count attempted and unattempted questions////
+
+
+                        var UniqueNames = $.unique(data1.map(function (d) { return d.SectionDescription; }));
+                        sessionStorage.TotalQuestions = data1.length;
+
+                        for (var i = 0; i < data1.length; i++)
+                        {
+
+                            if (UniqueNames.length > 1) {
+                                if (sessionStorage.SectionDesc != data1[i].SectionDescription)
+                                {
+                                    html += "<h4 class='Sectionheader'>" + data1[i].SectionDescription + "</h4>";
+                                }
+                            }
+
+                            if (data1[i].IsFlagged == "True")
+                            {
+                                html += " <span  style='margin-bottom:5px;' onclick='saveQuestionIndex(" + data1[i].QuestionNo + ")' class='badge badgeClassFlag' data-section='" + data1[i].SectionDescription + "'";
+                            }
+                            else if (data1[i].OptionId == "")
+                            {
+                                
+                                if (data1[i].AnswerText == "") {
+                                    html += " <span  style='margin-bottom:5px;' onclick='saveQuestionIndex(" + data1[i].QuestionNo + ")' class='badge badgeClass' data-section='" + data1[i].SectionDescription + "'";
+                                }
+                                else {
+                                    html += " <span  style='margin-bottom:5px;' onclick='saveQuestionIndex(" + data1[i].QuestionNo + ")' class='badge badgeClassAnswered' data-section='" + data1[i].SectionDescription + "'";
+                                }
+                            }
+                            else {
+                                html += " <span  style='margin-bottom:5px;' onclick='saveQuestionIndex(" + data1[i].QuestionNo + ")' class='badge badgeClassAnswered' data-section='" + data1[i].SectionDescription + "'";
+                            }
+
+
+                            if (data1[i].QuestionNo.length == 1)
+                            {
+
+                                html += "data-isflag='" + data1[i].IsFlagged + "'  data-answertext='" + data1[i].AnswerText + "'  data-questionid='" + data1[i].QuestionId + "' data-optionid='" + data1[i].OptionId + "'>";
+                                if (data1[i].IsFlagged == "True")
+                                {
+                                    html += "<i class='glyphicon glyphicon-flag' style='color:white;margin-right:2px'></i>0";
+                                }
+                                else
+                                {
+                                    html += "<i style='color:white;margin-right:2px'></i>0";
+                                }
+                                html += data1[i].QuestionNo + "</span>";
+                            }
+                            else
+                            {
+                                html += "data-isflag='" + data1[i].IsFlagged + "'  data-answertext='" + data1[i].AnswerText + "'  data-questionid='" + data1[i].QuestionId + "' data-optionid='" + data1[i].OptionId + "'>";
+                                if (data1[i].IsFlagged == "True") {
+                                    html += "<i style='color:white;margin-right:2px'></i>";
+                                }
+                                else {
+                                    html += "<i style='color:white;margin-right:2px'></i>";
+                                }
+                                html += data1[i].QuestionNo + "</span>";
+                            }
+                            sessionStorage.SectionDesc = data1[i].SectionDescription;
+                        }
+                        html += "</div>";
+
+                        $("#QuestionNos").html(html);
+                        sessionStorage.SectionDesc = "";
+
+                        $("#QuestionNos").off().on('click', 'span', function ()
+                        {
+
+                            if (($("#btnPrev").is(":visible")) || (sessionStorage.AllowQuestionNavigation == 'false'))
+                            {
+                                var $this = $(this);
+                                var QuestionId = $("#QuestionRow").find('input[type="hidden"]').val();
+                                var Span = $("#QuestionNos").find("span[data-questionid='" + QuestionId + "']");
+                                var Icon = Span.find('i');
+                                
+                                var OptionCol, AnswerText, AnswerVal, OptionId;
+                                if ($("#QuestionRow").find('input[type="text"]').val() == "FBS" || $("#QuestionRow").find('input[type="text"]').val() == "FBR")
+                                {
+                                    AnswerText = $("#optionCol").find('input[type="text"]').val();
+                                    OptionCol = "0";
+                                    OptionId = "0";
+                                }
+                                else
+                                {
+                                    OptionCol = $("#optionCol").find('input[type="radio"]:checked');
+                                    AnswerText = "";
+                                    AnswerVal = "0";
+                                    OptionId = "";
+                                }
+
+                                var IsFlagged = '';
+
+                                if (OptionId != "0")
+                                {
+                                    if (OptionCol.length > 0)
+                                        OptionId = OptionCol.parent('label').data('optionid');
+                                    else
+                                        OptionId = "0";
+                                }
+                                else
+                                {
+                                    //OptionId = $("#optionCol").find('input[type="text"]').data('optionid');
+                                    OptionId = "0";
+                                }
+
+                                if (Span.attr("data-isflag") == "True")
+                                {
+                                    IsFlagged = "True";
+                                }
+                                else
+                                {
+                                    IsFlagged = "";
+                                }
+
+                                var TimeTaken = $('#countdown').text();
+
+                                var SaveTestResponseObj = new Object();
+                                SaveTestResponseObj.TestId = TestId;
+                                SaveTestResponseObj.SetNo = Set;
+                                SaveTestResponseObj.LoginId = LoginId;
+                                SaveTestResponseObj.QuestionId = QuestionId;
+                                SaveTestResponseObj.OptionId = OptionId;
+                                SaveTestResponseObj.IsFlagged = IsFlagged;
+                                SaveTestResponseObj.IsRightAnswer = "0";
+                                SaveTestResponseObj.TimeTaken = TimeTaken;
+                                SaveTestResponseObj.AnswerText = AnswerText;
+
+                                $.ajax({
+                                    type: "Post",
+                                    contentType: "application/json; charset=utf-8",
+                                    //url: "./api/OnlineExam/SaveTestResponse",
+                                    url: '/api/OnlineExam/SaveTestResponse',
+                                    data: JSON.stringify(SaveTestResponseObj),
+                                    dataType: "json",
+                                    success: function (data2) {
+                                        if (data2.d == undefined)
+                                        {
+
+                                        }
+                                        else
+                                        {
+                                            data2 = data2.d;
+                                        }
+
+                                        if (data2.indexOf("Error") != -1)
+                                        {
+                                        }
+                                        else
+                                        {
+                                            $("#AttemptedSpan").html(data2[0].AttemptedCount);
+                                            $("#FlaggedSpan").html(data2[0].FlagCount);
+                                            $("#UnattemptedSpan").html(data2[0].UnAttemptedCount);
+                                            if (OptionCol == "0")
+                                            {
+                                                Span.attr("data-answertext", AnswerText);
+                                                Span.attr("data-optionid", "");
+                                                if (Span.hasClass("badgeClassSelected"))
+                                                {
+                                                    Span.removeClass('badgeClassSelected').addClass('badgeClassAnswered');
+                                                }
+                                                else if (Span.hasClass("badgeClass")) {
+                                                    Span.removeClass('badgeClass').addClass('badgeClassAnswered');
+                                                }
+                                            }
+                                            else if (OptionCol.length > 0)
+                                            {
+                                                var OptionId = OptionCol.parent('label').data('optionid');
+                                                Span.attr("data-optionid", OptionId);
+                                                Span.attr("data-answertext", "");
+                                                if (Span.hasClass("badgeClassSelected")) {
+                                                    Span.removeClass('badgeClassSelected').addClass('badgeClassAnswered');
+                                                }
+                                                else if (Span.hasClass("badgeClass")) {
+                                                    Span.removeClass('badgeClass').addClass('badgeClassAnswered');
+                                                }
+                                                else { }
+                                            }
+                                           
+                                            else {
+
+                                                if (Span.hasClass("badgeClassSelected")) {
+                                                    Span.removeClass('badgeClassSelected').addClass('badgeClass');
+                                                   
+                                                }
+
+
+                                            }
+
+                                            var spanBadge = $("#QuestionNos").find('span');
+                                            var AnsweredCountspanBadge = 0;
+                                            for (var k = 0; k < spanBadge.length; k++) {
+
+                                                if ((spanBadge[k].className == "badge badgeClassAnswered") || ((spanBadge[k].className == "badge badgeClassAnswered badgeClassSelected"))) {
+                                                    AnsweredCountspanBadge++;
+                                                }
+                                            }
+
+                                            if (parseInt(AnsweredCountspanBadge) != parseInt(data2[0].AttemptedCount)) {
+                                                GetQuestionNumbersDetail();
+                                            }
+
+                                            DisplayQuestion($this);
+                                           
+
+                                        }
+                                    },
+                                    error: function (result) {
+                                        console.log(result.responseText);
+                                    }
+                                });
+
+                            }
+
+                        }
+                        );
+                       
+                        var TestIdforIndex = localStorage.getItem('Id');
+                        if (parseInt(TestIdforIndex) == parseInt(TestId)) {
+                            var Index = parseInt(localStorage.getItem('QuestionIndex')) - 1;
+                            DisplayQuestion($("#QuestionNos").find('span:eq(' + Index + ')'));
+                            //DisplayOptions($("#QuestionNos").find('span:eq(' + Index + ')'));
+                        }
+                        else {
+                            if (parseInt(Attempted) == 0) {
+                                DisplayQuestion($("#QuestionNos").find('span').first());
+                                //DisplayOptions($("#QuestionNos").find('span').first());
+                            }
+                            else {
+                                var Index = parseInt(localStorage.getItem('QuestionIndexFirst')) - 1;
+                                DisplayQuestion($("#QuestionNos").find('span:eq(' + Index + ')'));
+                                //DisplayOptions($("#QuestionNos").find('span:eq(' + Index + ')'));
+                            }
+                        }
+                    }
+
+                }
+            },
+            error: function (result) {
+                console.log(result.responseText);
+            }
+        });
+    }
+
+    function saveQuestionIndex(Index)
+    {
+        localStorage.setItem('QuestionIndex', Index);
+        localStorage.setItem('Id', TestId);
+    }
+
+    function CalCulatedAttemptStatus()
+    {
+        var Span = $("#QuestionNos").find("span");
+
+        var flaggedQuestion = $("#QuestionNos").find("span[data-isflag='True']");
+        var Attempted = 0;
+        var Unattempted = 0;
+        var Flagged = 0;
+
+        Span.each(function ()
+        {
+
+            if ($(this).attr("data-isflag") == "True") {
+                Flagged += 1;
+            }
+
+            if ($(this).attr("data-optionid") == "")
+            {
+                //Unattempted += 1;
+                if ($(this).attr("data-answertext") == "")
+                {
+                    Unattempted += 1;
+                }
+                else {
+                    Attempted += 1;
+                }
+            }
+            else {
+                Attempted += 1;
+            }
+
+        });
+        
+        $("#AttemptedSpan").html(Attempted);
+        $("#FlaggedSpan").html(Flagged);
+        $("#UnattemptedSpan").html(Unattempted);
+    }
+
+    function DisplayQuestion(spanQuestion)
+    {
+        if (sessionStorage.AllowQuestionNavigation == 'false')
+        {
+            CalCulatedAttemptStatus();
+        }
+        
+        if ($(spanQuestion).hasClass("badgeClass"))
+        {
+            if (sessionStorage.AllowQuestionNavigation != 'false')
+            {
+                $("#btnUnFlag").hide();
+                $("#btnFlag").show();
+                $(spanQuestion).removeClass("badgeClass").addClass("badgeClassSelected");
+            }
+
+        }
+        else if ($(spanQuestion).hasClass("badgeClassAnswered"))
+        {
+            if (sessionStorage.AllowQuestionNavigation != 'false')
+            {
+                $("#btnUnFlag").hide();
+                $("#btnFlag").show();
+                $(spanQuestion).removeClass("badgeClassAnswered").addClass("badgeClassSelected");
+            }
+
+        }
+        else if ($(spanQuestion).hasClass("badgeClassFlag"))
+        {
+            if (sessionStorage.AllowQuestionNavigation != 'false')
+            {
+                $("#btnUnFlag").show();
+                $("#btnFlag").hide();
+            }
+        }
+
+        if (sessionStorage.AllowQuestionNavigation == 'false')
+        {
+            $(spanQuestion).removeClass("badgeClass").addClass("badgeClassSelected");
+        }
+
+        if (sessionStorage.AllowQuestionNavigation != 'false')
+        {
+            //Navigation is allowed//////////////////////////
+            var QuestionId = spanQuestion.data('questionid');
+            //alert('Lakhwinder' + QuestionId);
+            var QuestionsHeader = $("#QuestionNos").find("h4");
+            if (QuestionsHeader.length > 0)
+            {
+                $("#SectionTitle").show();
+                $("#SectionTitle").html("<span class='glyphicon glyphicon-hand-right' style='margin-right:5px;color:#D35400'></span>Section: " + spanQuestion.data('section'));
+            }
+            else
+            {
+                $("#SectionTitle").hide();
+                $("#SectionTitle").html("");
+            }
+            var QuestionDetail = new Object();
+            QuestionDetail.QuestionId = QuestionId;
+            var html = "";
+            $.ajax({
+                type: "Get",
+                contentType: "application/json; charset=utf-8",
+                //url: "./api/OnlineExam/GetQuestionDetailToDisplay",
+                url: '/api/OnlineExam/GetQuestionDetailToDisplay',
+                data: QuestionDetail,
+                dataType: "json",
+                success: function (data1)
+                {
+                    if (data1.d == undefined)
+                    {
+                        //Nothing to do
+                    }
+                    else
+                    {
+                        data1 = data1.d;
+                    }
+
+                    if (data1[0].QuestionDescription == "No Record Found" || data1[0].QuestionDescription == "Question could not be retrieved")
+                    {
+                        console.log(data1[0].QuestionDescription);
+                        $("#QuestionRow").html("");
+                    }
+                    else
+                    {
+
+                        if (data1.length > 0)
+                        {
+                            $("#QuestionRow").html("");
+                            html += "";//glyphicon glyphicon-comment
+                            if (data1[0].ParagraphText != "")
+                            {
+                                html += "<div class='col-md-12 col-sm-12' style='padding:0px'>";//<span class='glyphicon glyphicon-comment'></span>
+
+                                html += "<p style='color: brown;margin-top:0px;font-size:1.2em;color:#1B809E;border:2px solid #1B809E;padding:10px;border-radius:5px' class='QuestionDescription'>" + data1[0].ParagraphText + "</p>";
+                            }
+                            else
+                            {
+                                html += "<div class='col-md-12 col-sm-12' >";//<span class='glyphicon glyphicon-comment'></span>
+                            }
+                            html += "</div>";
+                            html += "<div class='col-md-1 col-sm-1 QuestionNoClass' style='margin:0px;padding:0px;'>";
+                            html += "<span>Q: " + spanQuestion.text() + " of " + sessionStorage.TotalQuestions + "</span>";//style='padding:12px;font-size:2em;'
+                            html += "</div>";
+                            html += "<div class='col-md-11 col-sm-11'>";
+                            if (data1[0].QuestionImage != "")
+                            {
+                                html += '<img class="img-responsive"  src="data:image/gif;base64,' + data1[0].QuestionImage + '" />';
+                            }
+                            else
+                            {
+                                html += "<p style='color: brown;margin-top:0px;font-size:1em;color:#1B809E' class='QuestionDescription'>" + data1[0].QuestionDescription + "</p>";
+                            }
+                            html += "<input type='hidden' value='" + data1[0].QuestionId + "'/>";
+                            html += "<input type='text' id='lblQuestionType' class='lblQuestionType' style='display:none;' value='" + data1[0].QuestionType + "'></div>";
+                            html += "</div>";
+                            
+                            $("#QuestionRow").html(html);
+                        }
+                        else
+                        {
+                            //Nothing to do
+                        }
+
+                    }
+                    DisplayOptions(spanQuestion);
+                },
+                error: function (result)
+                {
+                    console.log(result.responseText);
+                }
+
+            });
+        }
+        else
+        {
+            ///Navigation is not allowed////////////////////
+            var QuestionId = spanQuestion.data('questionid');
+            var QuesObj = new Object();
+            QuesObj.QuestionId = QuestionId;
+            QuesObj.TestId = TestId;
+            QuesObj.LoginName = '12012742';
+            $.ajax({
+                type: "Get",
+                contentType: "application/json; charset=utf-8",
+                url: '/api/OnlineExam/GetQuestionAttemptStatus',
+                data: QuesObj,
+                dataType: "json",
+                success: function (data1)
+                {
+                    if (data1.d == undefined)
+                    {
+                        //Nothing to do
+                    }
+                    else
+                    {
+                        data1 = data1.d;
+                    }
+                    if (data1[0].Status == 'True')
+                    {
+                        var QuestionsHeader = $("#QuestionNos").find("h4");
+                        if (QuestionsHeader.length > 0)
+                        {
+                            $("#SectionTitle").show();
+                            $("#SectionTitle").html("<span class='glyphicon glyphicon-hand-right' style='margin-right:5px;color:#D35400'></span>Section: " + spanQuestion.data('section'));
+                        }
+                        else
+                        {
+                            $("#SectionTitle").hide();
+                            $("#SectionTitle").html("");
+                        }
+                        var QuestionDetail = new Object();
+                        QuestionDetail.QuestionId = QuestionId;
+                        var html = "";
+                        $.ajax({
+                            type: "Get",
+                            contentType: "application/json; charset=utf-8",
+                           
+                            url: '/api/OnlineExam/GetQuestionDetailToDisplay',
+                            data: QuestionDetail,
+                            dataType: "json",
+                            success: function (data1)
+                            {
+                                if (data1.d == undefined)
+                                {
+
+                                }
+                                else
+                                {
+                                    data1 = data1.d;
+                                }
+                                if (data1[0].QuestionDescription == "No Record Found" || data1[0].QuestionDescription == "Question could not be retrieved")
+                                {
+                                    console.log(data1[0].QuestionDescription);
+                                    $("#QuestionRow").html("");
+                                }
+                                else
+                                {
+
+                                    if (data1.length > 0)
+                                    {
+                                        $("#QuestionRow").html("");
+                                        html += "";//glyphicon glyphicon-comment
+                                        if (data1[0].ParagraphText != "")
+                                        {
+                                            html += "<div class='col-md-12 col-sm-12' style='padding:0px'>";//<span class='glyphicon glyphicon-comment'></span>
+
+                                            html += "<p style='color: brown;margin-top:0px;font-size:1.2em;color:#1B809E;border:2px solid #1B809E;padding:10px;border-radius:5px' class='QuestionDescription'>" + data1[0].ParagraphText + "</p>";
+                                        }
+                                        else
+                                        {
+                                            html += "<div class='col-md-12 col-sm-12' >";//<span class='glyphicon glyphicon-comment'></span>
+                                        }
+                                        html += "</div>";
+                                        html += "<div class='col-md-1 col-sm-1 QuestionNoClass' style='margin:0px;padding:0px;'>";
+                                        html += "<span>Q: " + spanQuestion.text() + " of " + sessionStorage.TotalQuestions + "</span>";//style='padding:12px;font-size:2em;'
+                                        html += "</div>";
+                                        html += "<div class='col-md-11 col-sm-11'>";
+                                        if (data1[0].QuestionImage != "")
+                                        {
+                                            html += '<img class="img-responsive"  src="data:image/gif;base64,' + data1[0].QuestionImage + '" />';
+                                        }
+                                        else
+                                        {
+                                            html += "<p style='color: brown;margin-top:0px;font-size:1em;color:#1B809E' class='QuestionDescription'>" + data1[0].QuestionDescription + "</p>";
+                                        }
+                                        html += "<input type='hidden' value='" + data1[0].QuestionId + "'/>";
+                                        html += "<input type='text' id='lblQuestionType' class='lblQuestionType' style='display:none;' value='" + data1[0].QuestionType + "'></div>";
+                                        html += "</div>";
+                                        
+                                        $("#QuestionRow").html(html);
+
+                                    }
+                                    else
+                                    {
+                                        //No Data nothing to do?
+                                    }
+
+                                }
+                                DisplayOptions(spanQuestion);
+                            },
+                            error: function (result)
+                            {
+                                console.log(result.responseText);
+                            }
+
+                        });
+                    }
+                    else
+                    {
+                        //Not Allowed nothing to do?
+                    }
+
+
+                },
+                error: function (result) {
+                    console.log(result.responseText);
+                }
+
+            });
+
+        }
+
+    }
+
+    function DisplayOptions(spanQuestion)
+    {
+
+        if (sessionStorage.AllowQuestionNavigation != 'false')
+        {
+            var QuestionId = spanQuestion.data('questionid');
+            var QuestionDetail = new Object();
+            QuestionDetail.QuestionId = QuestionId;
+            var html = "";
+            if ($("#QuestionRow").find('input[type="text"]').val() == "FBS" || $("#QuestionRow").find('input[type="text"]').val() == "FBR")
+            {
+                $("#OptionRow").html("");
+
+                var Span = $("#QuestionNos").find("span[data-questionid='" + QuestionId + "']");
+                html += "<div class='col-md-1 col-sm-1 QuestionNoClass' style='padding:0px'>";
+                html += "<span>Options :</span>";
+                html += "</div>";
+                html += "<div class='col-md-11 col-sm-11' id='optionCol'>";
+                html += "<div class='col-md-6'>";
+                if ($("#QuestionRow").find('input[type="text"]').val() == "FBS") {
+                    //alert(Span.attr('data-answertext'));
+                    html += "<input type= 'text' class='form-control fbanswer' onkeypress='keyfilter(event)' value='" + Span.attr('data-answertext')+"'  maxlength='100' placeholder='Enter Answer'  />";
+                }
+                else {
+                   // alert(Span.attr('data-answertext'));
+                    html += "<input type= 'text' class='form-control fbanswer' value='" + Span.attr('data-answertext') +"' onkeypress='return validateFloatKeyPress(this,event);'  maxlength='100' placeholder='Enter Answer'  />";
+                }
+                html += "</div>";
+                html += "<input type='hidden' value='" + QuestionId + "'/>";
+                html += "</div>";
+
+                $("#OptionRow").html(html);
+            }
+            else {
+
+                 $.ajax({
+                type: "Get",
+                contentType: "application/json; charset=utf-8",
+                //url: "./api/OnlineExam/GetOptionDetailToDisplay",
+                url: '/api/OnlineExam/GetOptionDetailToDisplay',
+                data: QuestionDetail,
+                dataType: "json",
+                success: function (data1) {
+                    if (data1.d == undefined) {
+
+                    }
+                    else {
+                        data1 = data1.d;
+                    }
+                    if (data1[0].OptionDescription == "No Record Found" || data1[0].OptionDescription == "Option could not be retrieved") {
+                        console.log(data1[0].OptionDescription);
+                        $("#OptionRow").html("");
+                    }
+                    else {
+                        if (data1.length > 0) {
+                            $("#OptionRow").html("");
+                            var Span = $("#QuestionNos").find("span[data-questionid='" + data1[0].QuestionId + "']");
+                            html += "<div class='col-md-1 col-sm-1 QuestionNoClass' style='padding:0px'>";
+                            html += "<span>Options :</span>";
+                            html += "</div>";
+                            html += "<div class='col-md-11 col-sm-11' id='optionCol'>";
+
+                            //if (data1[0].QuestionType == "FBS" || data1[0].QuestionType == "FBR") {
+                            //    html += "<div class='col-md-6'>";
+                            //    html += "<input type= 'text' class='form-control fbanswer' data-optionid='" + data1[0].OptionId + "' maxlength='100' placeholder='Enter Answer' id='FBAnswer' value='" + data1[0].AnswerText + "' />";
+                            //    html += "</div>";
+                            //}
+                            //else {
+                                for (var i = 0; i < data1.length; i++) {
+                                    html += "<div class='radio'>";
+                                    html += "<label style='margin-right:5px;' data-optionid='" + data1[i].OptionId + "'>";//class='radio-inline'
+
+                                    if (Span.attr('data-optionid') != "") {
+                                        if (Span.attr('data-optionid') == data1[i].OptionId) {
+                                            html += "<input type='radio' name='optradio' checked='true'>";
+                                        }
+                                        else {
+                                            html += "<input type='radio' name='optradio'>";
+                                        }
+                                    }
+                                    else {
+                                        html += "<input type='radio' name='optradio'>";
+                                    }
+                                    if (data1[0].OptionImage != "") {
+                                        //html += '<img class="img-responsive" style="width:500px; height:100px;" src="data:image/gif;base64,' + data1[i].OptionImage + '" />';
+                                        html += '<img class="img-responsive" src="data:image/gif;base64,' + data1[i].OptionImage + '" />';
+                                    }
+                                    else {
+                                        html += data1[i].OptionDescription;
+                                    }
+                                    html += "</label>";
+                                    html += "</div>";
+                                    html += "<input type='hidden'  value='" + data1[i].QuestionId + "'/>";
+                                }
+                           // }
+
+
+
+                            html += "</div>";
+
+                            $("#OptionRow").html(html);
+                        }
+                        else {
+
+                        }
+
+                    }
+                },
+                error: function (result) {
+                    console.log(result.responseText);
+                }
+            });
+
+            }
+
+        }
+        else {
+            var QuestionId = spanQuestion.data('questionid');
+
+            var QuesObj = new Object();
+            QuesObj.QuestionId = QuestionId;
+            QuesObj.TestId = TestId;
+            QuesObj.LoginName = '12012742';
+
+            $.ajax({
+                type: "Get",
+                contentType: "application/json; charset=utf-8",
+                //url: "./api/OnlineExam/GetQuestionAttemptStatus",
+                url: '/api/OnlineExam/GetQuestionAttemptStatus',
+                data: QuesObj,
+                dataType: "json",
+                success: function (data1) {
+                    if (data1.d == undefined) {
+
+                    }
+                    else {
+                        data1 = data1.d;
+                    }
+                    if (data1[0].Status == 'True') {
+                        var QuestionId = spanQuestion.data('questionid');
+
+                        var QuestionDetail = new Object();
+                        QuestionDetail.QuestionId = QuestionId;
+                        var html = "";
+
+
+                        if ($("#QuestionRow").find('input[type="text"]').val() == "FBS" || $("#QuestionRow").find('input[type="text"]').val() == "FBR") {
+                            $("#OptionRow").html("");
+                            var Span = $("#QuestionNos").find("span[data-questionid='" + QuestionId + "']");
+                            //alert(Span.attr('data-answertext'));
+                            html += "<div class='col-md-1 col-sm-1 QuestionNoClass' style='padding:0px'>";
+                            html += "<span>Options :</span>";
+                            html += "</div>";
+                            html += "<div class='col-md-11 col-sm-11' id='optionCol'>";
+                            html += "<div class='col-md-6'>";
+                            if ($("#QuestionRow").find('input[type="text"]').val() == "FBS") {
+                                //alert(Span.attr('data-answertext'));
+                                html += "<input type= 'text' class='form-control fbanswer' value='" + Span.attr('data-answertext') +"' onkeypress='keyfilter(event)'  maxlength='100' placeholder='Enter Answer'  />";
+                            }
+                            else {
+                               // alert(Span.attr('data-answertext'));
+                                html += "<input type= 'text' class='form-control fbanswer' value='" + Span.attr('data-answertext') +"' onkeypress='return validateFloatKeyPress(this,event);'  maxlength='100' placeholder='Enter Answer'  />";
+                            }
+                            html += "</div>";
+                            html += "<input type='hidden' value='" + QuestionId + "'/>";
+                            html += "</div>";
+
+                            $("#OptionRow").html(html);
+                        }
+                        else {
+                            
+                            $.ajax({
+                                type: "Get",
+                                contentType: "application/json; charset=utf-8",
+                                //url: "./api/OnlineExam/GetOptionDetailToDisplay",
+                                url: '/api/OnlineExam/GetOptionDetailToDisplay',
+                                data: QuestionDetail,
+                                dataType: "json",
+                                success: function (data1) {
+                                    if (data1.d == undefined) {
+
+                                    }
+                                    else {
+                                        data1 = data1.d;
+                                    }
+                                    if (data1[0].OptionDescription == "No Record Found" || data1[0].OptionDescription == "Option could not be retrieved") {
+                                        console.log(data1[0].OptionDescription);
+                                        $("#OptionRow").html("");
+                                    }
+                                    else {
+                                        if (data1.length > 0) {
+                                            $("#OptionRow").html("");
+                                            var Span = $("#QuestionNos").find("span[data-questionid='" + data1[0].QuestionId + "']");
+                                            html += "<div class='col-md-1 col-sm-1 QuestionNoClass' style='padding:0px'>";
+                                            html += "<span>Options :</span>";
+                                            html += "</div>";
+                                            html += "<div class='col-md-11 col-sm-11' id='optionCol'>";
+
+                                            //if (data1[0].QuestionType == "FBS" || data1[0].QuestionType == "FBR") {
+                                            //    html += "<div class='col-md-6'>";
+                                            //    html += "<input type= 'text' class='form-control fbanswer' data-optionid='" + data1[0].OptionId + "' maxlength='100' placeholder='Enter Answer' id='FBAnswer' />";
+                                            //    html += "</div>";
+                                            //}
+                                            //else {
+                                                for (var i = 0; i < data1.length; i++) {
+                                                    html += "<div class='radio'>";
+                                                    html += "<label style='margin-right:5px;' data-optionid='" + data1[i].OptionId + "'>";//class='radio-inline'
+
+                                                    if (Span.attr('data-optionid') != ""){
+                                                        if (Span.attr('data-optionid') == data1[i].OptionId) {
+                                                            html += "<input type='radio' name='optradio' checked='true'>";
+                                                        }
+                                                        else {
+                                                            html += "<input type='radio' name='optradio'>";
+                                                        }
+                                                    }
+                                                    else {
+                                                        html += "<input type='radio' name='optradio'>";
+                                                    }
+                                                    if (data1[0].OptionImage != "") {
+                                                        //html += '<img class="img-responsive" style="width:500px; height:100px;" src="data:image/gif;base64,' + data1[i].OptionImage + '" />';
+                                                        html += '<img class="img-responsive" src="data:image/gif;base64,' + data1[i].OptionImage + '" />';
+                                                    }
+                                                    else {
+                                                        html += data1[i].OptionDescription;
+                                                    }
+                                                    html += "</label>";
+                                                    html += "</div>";
+                                                    html += "<input type='hidden' value='" + data1[i].QuestionId + "'/>";
+                                                }
+                                           // }
+                                            html += "</div>";
+
+                                            $("#OptionRow").html(html);
+                                        }
+                                        else {
+
+                                        }
+
+                                    }
+                                },
+                                error: function (result) {
+                                    console.log(result.responseText);
+                                }
+                            });
+
+                        }
+                    }
+                    else {
+
+                    }
+
+
+                },
+                error: function (result) {
+                    console.log(result.responseText);
+                }
+
+            });
+        }
+    }
+
+
+    function NextQuestion()
+    {
+        var QuestionId = $("#QuestionRow").find('input[type="hidden"]').val();
+        var Span = $("#QuestionNos").find("span[data-questionid='" + QuestionId + "']");
+        var OptionCol = $("#optionCol").find('input[type="radio"]:checked');
+        var QuestionType = $("#QuestionRow").find('input[type="text"]').val();
+
+        var Icon = Span.find('i');
+        
+        var answertext = $("#optionCol").find('input[type="text"]').val();
+        
+        if (typeof answertext == 'undefined') {
+            answertext == "";
+        }
+        if (OptionCol.length > 0) {
+            var OptionId = OptionCol.parent('label').data('optionid');
+           
+            var isFlag = Span.data('isflag');
+            Span.attr("data-optionid", OptionId);
+            //Span.attr("data-isflag", "False");
+            if (Span.hasClass("badgeClassSelected")) {
+                Span.removeClass('badgeClassSelected').addClass('badgeClassAnswered');
+            }
+            else if (Span.hasClass("badgeClass")) {
+                Span.removeClass('badgeClass').addClass('badgeClassAnswered');
+            }
+            //else if (Span.hasClass("badgeClassFlag")) {
+            //    Span.removeClass('badgeClassFlag').addClass('badgeClassAnswered');
+            //    Span.attr("data-isflag", "False");
+            //}
+
+        }
+        else if (answertext != "" && (QuestionType == "FBS" || QuestionType=="FBR")) {
+            
+            var isFlag = Span.data('isflag');
+            Span.attr("data-answertext", answertext);
+            Span.attr("data-optionid", "");
+            if (answertext != "") {
+               
+                if (Span.hasClass("badgeClassSelected")) {
+                    Span.removeClass('badgeClassSelected').addClass('badgeClassAnswered');
+                }
+                else if (Span.hasClass("badgeClass")) {
+                    Span.removeClass('badgeClass').addClass('badgeClassAnswered');
+                }
+            } else {
+                if (Span.hasClass("badgeClassAnswered")) {
+                    Span.removeClass('badgeClassAnswered').addClass('badgeClass');
+                }
+                else if (Span.hasClass("badgeClassSelected")) {
+                    Span.removeClass('badgeClassSelected').addClass('badgeClass');
+                }
+            }
+        }
+
+        else {
+            if (Span.hasClass("badgeClassAnswered")) {
+                Span.removeClass('badgeClassAnswered').addClass('badgeClass');
+            }
+                //else if (Span.hasClass("badgeClassFlag")) {
+                //    Span.removeClass('badgeClassFlag').addClass('badgeClass');
+                //    Span.attr("data-isflag", "False");
+                //}
+            else if (Span.hasClass("badgeClassSelected")) {
+                Span.removeClass('badgeClassSelected').addClass('badgeClass');
+                //Span.attr("data-isflag", "False");
+            }
+        }
+
+        if (Span.next().prop('class') != undefined) {
+            if (Span.next().hasClass("Sectionheader")) {
+                DisplayQuestion(Span.next().next());
+                //DisplayOptions(Span.next().next());
+            }
+            else {
+                DisplayQuestion(Span.next());
+                //DisplayOptions(Span.next());
+            }
+        }
+
+        //if (Icon.hasClass("glyphicon glyphicon-flag")) {
+        //    Icon.removeClass("glyphicon glyphicon-flag");
+        //}
+        //if (sessionStorage.AllowQuestionNavigation != 'false') {
+        //    if (Span.next().prop('class') != undefined) {
+        //        if (Span.next().hasClass("Sectionheader")) {
+        //            DisplayQuestion(Span.next().next());
+        //            DisplayOptions(Span.next().next());
+        //        }
+        //        else {
+        //            DisplayQuestion(Span.next());
+        //            DisplayOptions(Span.next());
+        //        }
+        //    }
+        //}
+        //else {
+        //    if (Span.next().prop('class') != undefined) {
+        //        if (Span.next().hasClass("Sectionheader")) {
+        //            DisplayQuestion(Span.next().next());
+        //            DisplayOptions(Span.next().next());
+        //        }
+        //        else {
+        //            if (Span.next().hasClass("badgeClassAnswered")) {
+        //                var Span = $("#QuestionNos").find("span[data-questionid='28']");
+        //                console.log(Span);
+        //                console.log($("#QuestionNos").find("span"));
+
+        //                DisplayQuestion(Span.next().next());
+        //                DisplayOptions(Span.next().next());
+        //            } else {
+        //                DisplayQuestion(Span.next());
+        //                DisplayOptions(Span.next());
+        //            }
+        //        }
+        //    }
+        //}
+
+
+    }
+
+    function PrevQuestion() {
+        var QuestionId = $("#QuestionRow").find('input[type="hidden"]').val();
+        var Span = $("#QuestionNos").find("span[data-questionid='" + QuestionId + "']");
+        var OptionCol = $("#optionCol").find('input[type="radio"]:checked');
+        var Icon = Span.find('i');
+        var QuestionType = $("#QuestionRow").find('input[type="text"]').val();
+        var answertext = $("#optionCol").find('input[type="text"]').val();
+        if (typeof answertext == 'undefined') {
+            answertext == "";
+        }
+        if (OptionCol.length > 0) {
+            var OptionId = OptionCol.parent('label').data('optionid');
+            Span.attr("data-optionid", OptionId);
+            //Span.attr("data-isflag", "False");
+            if (Span.hasClass("badgeClassSelected")) {
+                Span.removeClass('badgeClassSelected').addClass('badgeClassAnswered');
+            }
+            else if (Span.hasClass("badgeClass")) {
+                Span.removeClass('badgeClass').addClass('badgeClassAnswered');
+            }
+            else { }
+        }
+        else if (answertext != "" && (QuestionType == "FBS" || QuestionType == "FBR")) {
+
+            var isFlag = Span.data('isflag');
+            Span.attr("data-answwertext", answertext);
+            Span.attr("data-optionid", "");
+
+
+            if (answertext != "") {
+
+                if (Span.hasClass("badgeClassSelected")) {
+                    Span.removeClass('badgeClassSelected').addClass('badgeClassAnswered');
+                }
+                else if (Span.hasClass("badgeClass")) {
+                    Span.removeClass('badgeClass').addClass('badgeClassAnswered');
+                }
+            }
+        }
+
+
+        else {
+            if (Span.hasClass("badgeClassAnswered")) {
+                Span.removeClass('badgeClassAnswered').addClass('badgeClass');
+            }
+                //else if (Span.hasClass("badgeClassFlag")) {
+                //    Span.removeClass('badgeClassFlag').addClass('badgeClass');
+                //    //Span.attr("data-isflag", "False");
+                //}
+            else if (Span.hasClass("badgeClassSelected")) {
+                Span.removeClass('badgeClassSelected').addClass('badgeClass');
+                //Span.attr("data-isflag", "False");
+            }
+            else { }
+        }
+
+        //if (Icon.hasClass("glyphicon glyphicon-flag")) {
+        //    Icon.removeClass("glyphicon glyphicon-flag");
+        //}
+
+        if (Span.prev().prop('class') != undefined) {
+            if (Span.prev().hasClass("Sectionheader")) {
+                DisplayQuestion(Span.prev().prev());
+                //DisplayOptions(Span.prev().prev());
+            }
+            else {
+                DisplayQuestion(Span.prev());
+                //DisplayOptions(Span.prev());
+            }
+        }
+    }
+
+    function MarkFlag() {
+        var QuestionId = $("#QuestionRow").find('input[type="hidden"]').val();
+        var Span = $("#QuestionNos").find("span[data-questionid='" + QuestionId + "']");
+        var Icon = Span.find('i');
+        var OptionCol = $("#optionCol").find('input[type="radio"]:checked');
+        var OptionId = OptionCol.parent('label').data('optionid');
+        var answertext = $("#optionCol").find('input[type="text"]').val();
+        var QuestionType = $("#QuestionRow").find('input[type="text"]').val();
+        if (typeof answertext == 'undefined') {
+            answertext == "";
+        }
+        Span.attr("data-isflag", "True");
+        if (OptionCol.length > 0) {
+            Span.attr("data-optionid", OptionId);
+        }
+        else if (answertext != "" && (QuestionType == "FBS" || QuestionType == "FBR")) {
+
+            Span.attr("data-answertext", answertext);
+            Span.attr("data-optionid", "");
+        }
+        else {
+            if (Span.hasClass("badgeClassAnswered")) {
+                Span.removeClass('badgeClassAnswered').addClass('badgeClass');
+            }
+            else if (Span.hasClass("badgeClassFlag")) {
+                Span.removeClass('badgeClassFlag').addClass('badgeClass');
+            }
+            else if (Span.hasClass("badgeClassSelected")) {
+                Span.removeClass('badgeClassSelected').addClass('badgeClass');
+            }
+        }
+        if (Span.hasClass("badgeClassSelected")) {
+            Span.removeClass('badgeClassSelected').addClass('badgeClassAnswered');
+        }
+        Span.removeClass('badgeClass').addClass('badgeClassFlag');
+        Span.removeClass('badgeClassAnswered').addClass('badgeClassFlag');
+        Icon.addClass("glyphicon glyphicon-flag");
+
+        if (Span.next().prop('class') != undefined) {
+            if (Span.next().hasClass("Sectionheader")) {
+                DisplayQuestion(Span.next().next());
+                //DisplayOptions(Span.next().next());
+            }
+            else {
+                DisplayQuestion(Span.next());
+                //DisplayOptions(Span.next());
+            }
+        }
+    }
+
+    function UnMarkFlag() {
+        var QuestionId = $("#QuestionRow").find('input[type="hidden"]').val();
+        var Span = $("#QuestionNos").find("span[data-questionid='" + QuestionId + "']");
+        var Icon = Span.find('i');
+        var OptionCol = $("#optionCol").find('input[type="radio"]:checked');
+        var OptionId = OptionCol.parent('label').data('optionid');
+        var answertext = $("#optionCol").find('input[type="text"]').val();
+        var QuestionType = $("#QuestionRow").find('input[type="text"]').val();
+        if (typeof answertext == 'undefined') {
+            answertext == "";
+        }
+        Span.attr("data-isflag", "False");
+
+        if (OptionCol.length > 0) {
+            Span.attr("data-optionid", OptionId);
+            Span.removeClass('badgeClassFlag').addClass('badgeClassAnswered');
+            Icon.removeClass("glyphicon glyphicon-flag");
+        }
+        else if (answertext != "" && (QuestionType == "FBS" || QuestionType == "FBR")) {
+
+            Span.attr("data-answertext", answertext);
+            Span.attr("data-optionid", "");
+        }
+        else {
+            Span.removeClass('badgeClassFlag').addClass('badgeClass');
+            Icon.removeClass("glyphicon glyphicon-flag");
+        }
+
+        if (Span.next().prop('class') != undefined) {
+            if (Span.next().hasClass("Sectionheader")) {
+                DisplayQuestion(Span.next().next());
+                //DisplayOptions(Span.next().next());
+            }
+            else {
+                DisplayQuestion(Span.next());
+                //DisplayOptions(Span.next());
+            }
+        }
+    }
+
+    function HideWarning()
+    {
+
+        $(".sweet-alert").slideUp('slow', function () {
+            $(".sweet-overlay").css("display", "none");
+        });
+        $("#WarningMessage").html("");
+    }
+
+    function ShowWarning()
+    {
+        $(".sweet-overlay").css("display", "block");
+        $(".sweet-alert").slideDown('slow');
+    }
+
+    function SaveTestResponse(type, button)
+    {
+        var l = Ladda.create(button);
+        l.start();
+        var QuestionId = $("#QuestionRow").find('input[type="hidden"]').val();
+        var Span = $("#QuestionNos").find("span[data-questionid='" + QuestionId + "']");
+      
+        var AnswerText;
+        var OptionCol, AnswerVal, OptionId;
+        if ($("#QuestionRow").find('input[type="text"]').val() == "FBS" || $("#QuestionRow").find('input[type="text"]').val() == "FBR") {
+            AnswerText = $("#optionCol").find('input[type="text"]').val();
+            OptionCol = "0";
+            OptionId = "0";
+            //AnswerVal= AnswerText.val();
+        }
+        else {
+            OptionCol = $("#optionCol").find('input[type="radio"]:checked');
+            AnswerText = "";
+            AnswerVal = "0";
+        }
+        //OptionCol = $("#optionCol").find('input[type="radio"]:checked');
+
+
+        
+        var IsFlagged;
+        if (OptionId != "0") {
+            if (OptionCol.length > 0)
+                OptionId = OptionCol.parent('label').data('optionid');
+            else
+                OptionId = "0";
+        }
+        else {
+            //OptionId = $("#optionCol").find('input[type="text"]').data('optionid');
+            OptionId = "0";
+        }
+        if (type == "Flag")
+            IsFlagged = "True";
+        else if (type == "Flagged")
+            IsFlagged = "True";
+        else if (type == "NotFlagged")
+            IsFlagged = "";
+        else if (type == "UnFlag")
+            IsFlagged = "False";
+        else {
+            if (Span.attr("data-isflag") == "True") {
+                IsFlagged = "True";
+            }
+            else {
+                IsFlagged = "";
+            }
+        }
+
+        var TimeTaken = $('#countdown').text();
+
+        var SaveTestResponseObj = new Object();
+        SaveTestResponseObj.TestId = TestId;
+        SaveTestResponseObj.SetNo = Set;
+        SaveTestResponseObj.LoginId = LoginId;
+        SaveTestResponseObj.QuestionId = QuestionId;
+        SaveTestResponseObj.OptionId = OptionId;
+        SaveTestResponseObj.IsFlagged = IsFlagged;
+        SaveTestResponseObj.IsRightAnswer = "0";
+        SaveTestResponseObj.AnswerText = AnswerText;
+
+        SaveTestResponseObj.TimeTaken = TimeTaken;
+
+        $.ajax({
+            type: "Post",
+            contentType: "application/json; charset=utf-8",
+            //url: "./api/OnlineExam/SaveTestResponse",
+            url: '/api/OnlineExam/SaveTestResponse',
+            data: JSON.stringify(SaveTestResponseObj),
+            dataType: "json",
+            success: function (data1) {
+                if (data1.d == undefined) {
+
+                }
+                else {
+                    data1 = data1.d;
+                }
+                if (data1.indexOf("Error") != -1) {
+                }
+                else {
+                    $("#AttemptedSpan").html(data1[0].AttemptedCount);
+                    $("#FlaggedSpan").html(data1[0].FlagCount);
+                    $("#UnattemptedSpan").html(data1[0].UnAttemptedCount);
+
+                    if (TimeTaken == "00:00") {
+                        l.stop();
+                        //EndTest("false");
+
+                    }
+                    else {
+                        if (type == "Next") {
+                            NextQuestion();
+                        }
+                        else if (type == "Previous") {
+                            PrevQuestion();
+                        }
+                        else if (type == "Flag") {
+                            MarkFlag();
+                        }
+                        else if (type == "UnFlag") {
+                            UnMarkFlag();
+                        }
+                        setTimeout(function () {
+                            l.stop();
+                        }, 500);
+                    }
+
+                }
+            },
+            error: function (result) {
+                console.log(result.responseText);
+                setTimeout(function () {
+                    l.stop();
+                }, 500);
+            }
+        });
+    }
+
+
+    function exitAttemp()
+    {
+        console.log("attempt");
+    }
+
+    function userStayed()
+    {
+        // alert("User Stayed");
+    }
+
+    function SaveTime()
+    
+{
+        window.setInterval(function () {
+            var time = $('#countdown').text();
+            var min = time.split(':')[0];
+            var sec = time.split(':')[1];
+            if (min > 0 || sec > 0) {
+                var QuestionId = $("#QuestionRow").find('input[type="hidden"]').val();
+                var Span = $("#QuestionNos").find("span[data-questionid='" + QuestionId + "']");
+                if (Span.data('isflag') == 'True') {
+                    SaveTestResponse('Flagged', document.getElementById('btnPrev'));
+                }
+                else {
+                    SaveTestResponse('NotFlagged', document.getElementById('btnPrev'));
+                }
+
+            }
+        }, 20000); //seconds after data is saving
+    }
+
+    function GetUserSessionOutMessage()
+    {
+        window.setInterval(function () {
+            var LoginId = '12012742';
+
+            var UpdateObj = new Object();
+            UpdateObj.LoginName = LoginId;
+            UpdateObj.DeviceDetails = guid();
+
+            $.ajax({
+                type: "Post",
+                contentType: "application/json; charset=utf-8",
+                url: "api/OnlineExam/UserSessionOutMessage",
+                data: JSON.stringify(UpdateObj),
+                dataType: "json",
+                success: function (data1) {
+                    console.log(data1);
+                    if (data1 == "") {
+                        //alert('Ok');
+                    }
+                    else {
+
+                        swal({
+                            title: "Note",
+                            text: data1,
+                            type: "warning",
+                            showCancelButton: false,
+                            confirmButtonClass: "btn-danger",
+                            confirmButtonText: "OK",
+                            closeOnConfirm: false
+                        },
+                                                    function () {
+                                                        window.location.href = "Home";
+                                                    });
+
+
+                    }
+                },
+                error: function (result) {
+                }
+            });
+        }, 30000); //seconds after multisession login is detected
+    }
+
+    function guid()
+    {
+        var sessionid = 'r1kng0e1bcb3sz0qhdgre52y';
+        return sessionid;
+    }
+
+    function DisplayTime()
+    {
+
+        var TestDetailObj = new Object();
+        TestDetailObj.TestId = TestId;
+        TestDetailObj.Set = Set;
+        TestDetailObj.LoginId = LoginId;
+
+
+        $.ajax({
+            type: "Get",
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            //url: "./api/OnlineExam/GetDisplayTime",
+            url: '/api/OnlineExam/GetDisplayTime',
+            data: TestDetailObj,
+            async: false,
+            success: function (msg) {
+                if (msg != '0') {
+
+                    var time;
+                    if (msg.d == undefined) {
+                        time = msg;
+                    }
+                    else {
+                        time = msg.d;
+                    }
+
+                    var min = parseInt(time.split(':')[0].toString());
+                    var sec = parseInt(time.split(':')[1].toString());
+                    var calTime = (((min * 60) + sec) * 1000);
+
+                    Example2.cal(calTime);
+                }
+                else {
+                    alert('Problem in displaying Time');
+                }
+            }
+                             ,
+            error: function (xhr, ajaxOptions, thrownError) {
+                //Error();
+            }
+        });
+
+    }
+
+    function EndTest(IsExplicit)
+    {
+
+        var TimeTaken = $('#countdown').text();
+       
+        var EndTestObj = new Object();
+        EndTestObj.TestId = TestId;
+        EndTestObj.SetNumber = Set;
+        EndTestObj.LoginName = LoginId;
+        EndTestObj.TimeRemaining = TimeTaken;
+        EndTestObj.IsExplicitEnd = IsExplicit;
+
+        $.ajax({
+            type: "Post",
+            contentType: "application/json; charset=utf-8",
+            //url: "./api/OnlineExam/EndTestDetail",
+            url: '/api/OnlineExam/EndTestDetail',
+            data: JSON.stringify(EndTestObj),
+            dataType: "json",
+            success: function (data1) {
+                if (data1.d == undefined) {
+
+                }
+                else {
+                    data1 = data1.d;
+                }
+                if (data1.indexOf("Error") != -1) {
+                    swal("Error", "An Error Has Occured.Please Try Again", "error");
+                    console.log(data1);
+                }
+                else {
+                    sessionStorage.IsExplicit = IsExplicit;
+                    if (sessionStorage.IsRedirect == "1") {
+                        sessionStorage.TestIdForResult = TestId;
+                        sessionStorage.SetForResult = Set;
+                        //window.open(
+                        //                   'Result', '_blank'
+                        //                   ).focus();
+                        //self.close();
+                        //window.location.replace('Result');
+
+                        window.location.href = '/Result';
+                     }
+                    else {
+                        if (sessionStorage.ShowResult == "True") {
+                            sessionStorage.TestIdForResult = TestId;
+                            sessionStorage.SetForResult = Set;
+
+                            //window.open(
+                            //              'Result', '_blank'
+                            //              ).focus();
+                            //self.close();
+
+                            //window.location.replace('Result');
+
+                            window.location.href = '/Result';
+                        }
+                        else {
+                            //window.open(
+                            //              'EndTest', '_blank'
+                            //              ).focus();
+                            //self.close();
+
+                            //window.location.replace('EndTest');
+
+                            window.location.href = '/EndTest';
+                        }
+                    }
+
+                }
+            }
+            //,
+            //error: function (result) {
+            //    //alert();
+            //    console.log(result);
+            //    //swal("Error", "An Error Has Occured.Please Try Again", "error");
+            //    //console.log(result.responseText);
+            //}
+        });
+
+    }
+
+    function ClearResponse() {
+        var OptionCol = $("#optionCol").find('input[type="radio"]:checked');
+        
+        if (OptionCol.length > 0) {
+            var QuestionId = $("#QuestionRow").find('input[type="hidden"]').val();
+            var Span = $("#QuestionNos").find("span[data-questionid='" + QuestionId + "']");
+            OptionCol.prop('checked', false);
+            Span.attr("data-optionid", "");
+        }
+        if (OptionCol.length == 0) {
+            var QuestionId = $("#QuestionRow").find('input[type="hidden"]').val();
+            $("#optionCol").find('input[type="text"]').val('');
+            var Span = $("#QuestionNos").find("span[data-questionid='" + QuestionId + "']");
+            Span.attr("data-answertext", "");
+        }
+
+    }
+
+    function ConfirmEndTest(button) {
+        //NextQuestion();
+        //CalCulatedAttemptStatus();
+        var l = Ladda.create(button);
+        l.start();
+        var Span = $("#QuestionNos").find("span[data-optionid='']");
+
+       // var notattempted = $('#QuestionNos span').filter(function () { return $(this).data("optionid") == '' && $(this).data("answertext") == '' }).length;
+        //alert($("#UnattemptedSpan").text());
+        var notattempted = $("#UnattemptedSpan").text();
+        var Message = "";
+        //if (Span.length == 0) {
+        //}
+        //else {
+        //    Message = "You have not attempted " + Span.length + " questions";
+        //}
+        if (notattempted == 0) {
+        }
+        else {
+            Message = "You have not attempted " + notattempted + " questions";
+        }
+        swal({
+            title: "Are you sure to End Test?",
+            text: Message,
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonClass: 'btn-danger',
+            confirmButtonText: 'Yes',
+            cancelButtonText: "No",
+            closeOnConfirm: false,
+            closeOnCancel: true
+        },
+    function (isConfirm) {
+        if (isConfirm) {
+
+            var QuestionId = $("#QuestionRow").find('input[type="hidden"]').val();
+            var Span = $("#QuestionNos").find("span[data-questionid='" + QuestionId + "']");
+            if (Span.data('isflag') == 'True') {
+                SaveTestResponse('Flagged', button);
+            }
+            else {
+                SaveTestResponse('NotFlagged', button);
+            }
+
+            EndTest('true');
+
+        }
+
+    });
+        setTimeout(function () {
+            l.stop();
+        }, 1000);
+    }
+
+</script>
+
+<div class="container-fluid" style="background:#fff;">
+    
+    <div class="col-md-12">
+        <div id="header" class="navbar navbar-default navbar-fixed-top modal__header">
+            <nav class="">
+                <div class="col-md-4 col-sm-3 col-xs-12" style="padding:0;">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="https://oas.lpu.in/LiveTest#" data-toggle="modal" data-target="#myModal">
+                                <span class="glyphicon glyphicon-th-list" style="margin-right: 5px; color: #D35400"></span>View Instructions
+                            </a>
+                            <a href="https://oas.lpu.in/LiveTest#" style="display: none">
+                                <span class="glyphicon glyphicon-user" style="margin-right: 5px; color: #D35400"></span>
+                                <span id="UserName">12012742</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 col-sm-4 col-xs-12" style="padding:0;">
+                    <ul class="nav navbar-nav">
+                        <li class="test-hide">
+                            <a href="https://oas.lpu.in/LiveTest#">
+                                <span class="glyphicon glyphicon-list-alt" style="margin-right: 5px; color: #D35400"></span>Test Name- 
+                                <span id="TestName">Test Your Skills on HTML and Javascript</span></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 col-xs-12 col-sm-5">
+                    <ul class="nav navbar-nav time-right">
+                        <li>
+                            <span class="time-remaining">Time Remaining-</span>
+                            <span class="time-show" id="countdown">56:47</span>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+
+
+    <div class="container modal__content" style="padding:0;">
+        <div class="col-md-12 scroll-test" style="padding:0;">
+            <div class="col-md-3 col-sm-3 col-xs-5" style="padding-left:0;">
+                
+                <div class="col-md-12 col-sm-12 col-xs-12" style="margin: 0px; padding: 0px;">
+                    
+
+                </div>
+
+                <div class="col-md-12 col-sm-12 col-xs-12" style="margin: 0px; padding: 0px;">
+                    <div class="col-md-12 col-sm-12 col-xs-12" style="margin: 0px; padding: 0px;">
+                        <div class="bs-callout bs-callout-success">
+                            
+                            <div class="row">
+                                <div class="col-md-12" style="margin: 0px; padding: 0px; margin-top: 5px;">
+
+                                    <label class="control-label" id="Name" style="color: #D35400">Mahesh Jaiswal , 12012742</label>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-12 col-sm-12 col-xs-12" style="margin: 0px; padding: 0px;">
+                    <div class="col-md-12 col-sm-12 col-xs-12" style="margin: 0px; padding: 0px;">
+                        <div class="bs-callout bs-callout-danger">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12" style="margin: 0px; padding: 0px;">
+                                    <h4>Attempt Status</h4>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4 text-center" style="margin: 0px; padding: 0px; margin-top: 5px;">
+                                    <button type="button" class="btn btn-success AttemptStatusButton btn-size">Answered <span class="badge AttemptStatusSpan" id="AttemptedSpan">1</span></button>
+                                </div>
+
+                                <div class="col-md-4 text-center" style="margin: 0px; padding: 0px; margin-top: 5px;">
+                                    <button type="button" id="FlaggedStatus" class="btn btn-warning AttemptStatusButton btn-size" style="display: none;">Flagged <span class="badge AttemptStatusSpan" id="FlaggedSpan">0</span></button>
+                                </div>
+
+                                <div class="col-md-4 text-center" style="margin: 0px; padding: 0px; margin-top: 5px;">
+                                    <button type="button" class="btn btn-primary AttemptStatusButton btn-size">Pending<span class="badge AttemptStatusSpan" id="UnattemptedSpan">44</span></button>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-12 col-sm-12 col-xs-12" style="margin: 0px; padding: 0px;">
+                    <div class="col-md-12 col-sm-12 col-xs-12" style="margin: 0px; padding: 0px;">
+                        <div class="bs-callout bs-callout-warning">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12" style="margin: 0px; padding: 0px;">
+                                    <h4>Questions</h4>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12" style="margin: 0px; padding: 0px;" id="QuestionNos"><div class="QuestionNosCol"> <span style="margin-bottom:5px;" onclick="saveQuestionIndex(1)" class="badge badgeClassAnswered" data-section="Default" data-isflag="" data-answertext="" data-questionid="505012" data-optionid="1901724"><i style="color:white;margin-right:2px"></i>01</span> <span style="margin-bottom:5px;" onclick="saveQuestionIndex(2)" class="badge badgeClassSelected" data-section="Default" data-isflag="" data-answertext="" data-questionid="505010" data-optionid=""><i style="color:white;margin-right:2px"></i>02</span> <span style="margin-bottom:5px;" onclick="saveQuestionIndex(3)" class="badge badgeClass" data-section="Default" data-isflag="" data-answertext="" data-questionid="504972" data-optionid=""><i style="color:white;margin-right:2px"></i>03</span> <span style="margin-bottom:5px;" onclick="saveQuestionIndex(4)" class="badge badgeClass" data-section="Default" data-isflag="" data-answertext="" data-questionid="505016" data-optionid=""><i style="color:white;margin-right:2px"></i>04</span> <span style="margin-bottom:5px;" onclick="saveQuestionIndex(5)" class="badge badgeClass" data-section="Default" data-isflag="" data-answertext="" data-questionid="504948" data-optionid=""><i style="color:white;margin-right:2px"></i>05</span> <span style="margin-bottom:5px;" onclick="saveQuestionIndex(6)" class="badge badgeClass" data-section="Default" data-isflag="" data-answertext="" data-questionid="505015" data-optionid=""><i style="color:white;margin-right:2px"></i>06</span> <span style="margin-bottom:5px;" onclick="saveQuestionIndex(7)" class="badge badgeClass" data-section="Default" data-isflag="" data-answertext="" data-questionid="504938" data-optionid=""><i style="color:white;margin-right:2px"></i>07</span> <span style="margin-bottom:5px;" onclick="saveQuestionIndex(8)" class="badge badgeClass" data-section="Default" data-isflag="" data-answertext="" data-questionid="504947" data-optionid=""><i style="color:white;margin-right:2px"></i>08</span> <span style="margin-bottom:5px;" onclick="saveQuestionIndex(9)" class="badge badgeClass" data-section="Default" data-isflag="" data-answertext="" data-questionid="505011" data-optionid=""><i style="color:white;margin-right:2px"></i>09</span> <span style="margin-bottom:5px;" onclick="saveQuestionIndex(10)" class="badge badgeClass" data-section="Default" data-isflag="" data-answertext="" data-questionid="505009" data-optionid=""><i style="color:white;margin-right:2px"></i>10</span> <span style="margin-bottom:5px;" onclick="saveQuestionIndex(11)" class="badge badgeClass" data-section="Default" data-isflag="" data-answertext="" data-questionid="505018" data-optionid=""><i style="color:white;margin-right:2px"></i>11</span> <span style="margin-bottom:5px;" onclick="saveQuestionIndex(12)" class="badge badgeClass" data-section="Default" data-isflag="" data-answertext="" data-questionid="505007" data-optionid=""><i style="color:white;margin-right:2px"></i>12</span> <span style="margin-bottom:5px;" onclick="saveQuestionIndex(13)" class="badge badgeClass" data-section="Default" data-isflag="" data-answertext="" data-questionid="504939" data-optionid=""><i style="color:white;margin-right:2px"></i>13</span> <span style="margin-bottom:5px;" onclick="saveQuestionIndex(14)" class="badge badgeClass" data-section="Default" data-isflag="" data-answertext="" data-questionid="504964" data-optionid=""><i style="color:white;margin-right:2px"></i>14</span> <span style="margin-bottom:5px;" onclick="saveQuestionIndex(15)" class="badge badgeClass" data-section="Default" data-isflag="" data-answertext="" data-questionid="504958" data-optionid=""><i style="color:white;margin-right:2px"></i>15</span> <span style="margin-bottom:5px;" onclick="saveQuestionIndex(16)" class="badge badgeClass" data-section="Default" data-isflag="" data-answertext="" data-questionid="504937" data-optionid=""><i style="color:white;margin-right:2px"></i>16</span> <span style="margin-bottom:5px;" onclick="saveQuestionIndex(17)" class="badge badgeClass" data-section="Default" data-isflag="" data-answertext="" data-questionid="504999" data-optionid=""><i style="color:white;margin-right:2px"></i>17</span> <span style="margin-bottom:5px;" onclick="saveQuestionIndex(18)" class="badge badgeClass" data-section="Default" data-isflag="" data-answertext="" data-questionid="505017" data-optionid=""><i style="color:white;margin-right:2px"></i>18</span> <span style="margin-bottom:5px;" onclick="saveQuestionIndex(19)" class="badge badgeClass" data-section="Default" data-isflag="" data-answertext="" data-questionid="504960" data-optionid=""><i style="color:white;margin-right:2px"></i>19</span> <span style="margin-bottom:5px;" onclick="saveQuestionIndex(20)" class="badge badgeClass" data-section="Default" data-isflag="" data-answertext="" data-questionid="504978" data-optionid=""><i style="color:white;margin-right:2px"></i>20</span> <span style="margin-bottom:5px;" onclick="saveQuestionIndex(21)" class="badge badgeClass" data-section="Default" data-isflag="" data-answertext="" data-questionid="504942" data-optionid=""><i style="color:white;margin-right:2px"></i>21</span> <span style="margin-bottom:5px;" onclick="saveQuestionIndex(22)" class="badge badgeClass" data-section="Default" data-isflag="" data-answertext="" data-questionid="504940" data-optionid=""><i style="color:white;margin-right:2px"></i>22</span> <span style="margin-bottom:5px;" onclick="saveQuestionIndex(23)" class="badge badgeClass" data-section="Default" data-isflag="" data-answertext="" data-questionid="504995" data-optionid=""><i style="color:white;margin-right:2px"></i>23</span> <span style="margin-bottom:5px;" onclick="saveQuestionIndex(24)" class="badge badgeClass" data-section="Default" data-isflag="" data-answertext="" data-questionid="505004" data-optionid=""><i style="color:white;margin-right:2px"></i>24</span> <span style="margin-bottom:5px;" onclick="saveQuestionIndex(25)" class="badge badgeClass" data-section="Default" data-isflag="" data-answertext="" data-questionid="505001" data-optionid=""><i style="color:white;margin-right:2px"></i>25</span> <span style="margin-bottom:5px;" onclick="saveQuestionIndex(26)" class="badge badgeClass" data-section="Default" data-isflag="" data-answertext="" data-questionid="505006" data-optionid=""><i style="color:white;margin-right:2px"></i>26</span> <span style="margin-bottom:5px;" onclick="saveQuestionIndex(27)" class="badge badgeClass" data-section="Default" data-isflag="" data-answertext="" data-questionid="505013" data-optionid=""><i style="color:white;margin-right:2px"></i>27</span> <span style="margin-bottom:5px;" onclick="saveQuestionIndex(28)" class="badge badgeClass" data-section="Default" data-isflag="" data-answertext="" data-questionid="504984" data-optionid=""><i style="color:white;margin-right:2px"></i>28</span> <span style="margin-bottom:5px;" onclick="saveQuestionIndex(29)" class="badge badgeClass" data-section="Default" data-isflag="" data-answertext="" data-questionid="504971" data-optionid=""><i style="color:white;margin-right:2px"></i>29</span> <span style="margin-bottom:5px;" onclick="saveQuestionIndex(30)" class="badge badgeClass" data-section="Default" data-isflag="" data-answertext="" data-questionid="504974" data-optionid=""><i style="color:white;margin-right:2px"></i>30</span> <span style="margin-bottom:5px;" onclick="saveQuestionIndex(31)" class="badge badgeClass" data-section="Default" data-isflag="" data-answertext="" data-questionid="504962" data-optionid=""><i style="color:white;margin-right:2px"></i>31</span> <span style="margin-bottom:5px;" onclick="saveQuestionIndex(32)" class="badge badgeClass" data-section="Default" data-isflag="" data-answertext="" data-questionid="504943" data-optionid=""><i style="color:white;margin-right:2px"></i>32</span> <span style="margin-bottom:5px;" onclick="saveQuestionIndex(33)" class="badge badgeClass" data-section="Default" data-isflag="" data-answertext="" data-questionid="504946" data-optionid=""><i style="color:white;margin-right:2px"></i>33</span> <span style="margin-bottom:5px;" onclick="saveQuestionIndex(34)" class="badge badgeClass" data-section="Default" data-isflag="" data-answertext="" data-questionid="505014" data-optionid=""><i style="color:white;margin-right:2px"></i>34</span> <span style="margin-bottom:5px;" onclick="saveQuestionIndex(35)" class="badge badgeClass" data-section="Default" data-isflag="" data-answertext="" data-questionid="504973" data-optionid=""><i style="color:white;margin-right:2px"></i>35</span> <span style="margin-bottom:5px;" onclick="saveQuestionIndex(36)" class="badge badgeClass" data-section="Default" data-isflag="" data-answertext="" data-questionid="504949" data-optionid=""><i style="color:white;margin-right:2px"></i>36</span> <span style="margin-bottom:5px;" onclick="saveQuestionIndex(37)" class="badge badgeClass" data-section="Default" data-isflag="" data-answertext="" data-questionid="505005" data-optionid=""><i style="color:white;margin-right:2px"></i>37</span> <span style="margin-bottom:5px;" onclick="saveQuestionIndex(38)" class="badge badgeClass" data-section="Default" data-isflag="" data-answertext="" data-questionid="504941" data-optionid=""><i style="color:white;margin-right:2px"></i>38</span> <span style="margin-bottom:5px;" onclick="saveQuestionIndex(39)" class="badge badgeClass" data-section="Default" data-isflag="" data-answertext="" data-questionid="505008" data-optionid=""><i style="color:white;margin-right:2px"></i>39</span> <span style="margin-bottom:5px;" onclick="saveQuestionIndex(40)" class="badge badgeClass" data-section="Default" data-isflag="" data-answertext="" data-questionid="504951" data-optionid=""><i style="color:white;margin-right:2px"></i>40</span> <span style="margin-bottom:5px;" onclick="saveQuestionIndex(41)" class="badge badgeClass" data-section="Default" data-isflag="" data-answertext="" data-questionid="504976" data-optionid=""><i style="color:white;margin-right:2px"></i>41</span> <span style="margin-bottom:5px;" onclick="saveQuestionIndex(42)" class="badge badgeClass" data-section="Default" data-isflag="" data-answertext="" data-questionid="504944" data-optionid=""><i style="color:white;margin-right:2px"></i>42</span> <span style="margin-bottom:5px;" onclick="saveQuestionIndex(43)" class="badge badgeClass" data-section="Default" data-isflag="" data-answertext="" data-questionid="504945" data-optionid=""><i style="color:white;margin-right:2px"></i>43</span> <span style="margin-bottom:5px;" onclick="saveQuestionIndex(44)" class="badge badgeClass" data-section="Default" data-isflag="" data-answertext="" data-questionid="504967" data-optionid=""><i style="color:white;margin-right:2px"></i>44</span> <span style="margin-bottom:5px;" onclick="saveQuestionIndex(45)" class="badge badgeClass" data-section="Default" data-isflag="" data-answertext="" data-questionid="504950" data-optionid=""><i style="color:white;margin-right:2px"></i>45</span></div></div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+
+            </div>
+
+            <div class="col-md-9 col-sm-9 col-xs-7">
+                <div class="row">
+                    <div class="col-md-12 pull-left" style="color: brown; margin: 15px 0 0 0; padding: 0px;">
+                        <h4 class="Sectionheader" id="SectionTitle" style="font-size: 1.5em !important; display: none;"></h4>
+                    </div>
+                </div>
+                <div class="row" id="QuestionRow" style="overflow-x:auto"><div class="col-md-12 col-sm-12"></div><div class="col-md-1 col-sm-1 QuestionNoClass" style="margin:0px;padding:0px;"><span>Q: 02 of 45</span></div><div class="col-md-11 col-sm-11"><img class="img-responsive" src="data:image/gif;base64,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"><input type="hidden" value="505010"><input type="text" id="lblQuestionType" class="lblQuestionType" style="display:none;" value="MCSA"></div></div>
+                <div class="row" id="OptionRow" style="padding-bottom:25px"><div class="col-md-1 col-sm-1 QuestionNoClass" style="padding:0px"><span>Options :</span></div><div class="col-md-11 col-sm-11" id="optionCol"><div class="radio"><label style="margin-right:5px;" data-optionid="1901716"><input type="radio" name="optradio">Blue</label></div><input type="hidden" value="505010"><div class="radio"><label style="margin-right:5px;" data-optionid="1901717"><input type="radio" name="optradio">Green</label></div><input type="hidden" value="505010"></div></div>
+                <div class="row">
+                    <div class="col-md-1 col-sm-1">
+                    </div>
+                    <div class="col-md-11 col-sm-11">
+                        <a href="https://oas.lpu.in/LiveTest#" style="text-decoration: none; color: #63C0E8" onclick="ClearResponse();"><span class="glyphicon glyphicon-erase" style="color: #63C0E8; margin-right: 3px;"></span>Clear Response</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="col-md-12 modal__footer">
+        <div id="footer" class="navbar navbar-default navbar-fixed-bottom">
+            <nav>
+                <div class="col-md-1 col-xs-3" style="padding:0 0 0 15px;">
+                    <a href="https://oas.lpu.in/LiveTest#" data-style="slide-down" id="btnPrev" class="pre-btn ladda-button" onclick="SaveTestResponse(&#39;Previous&#39;,this)" style="display: none;" disabled="" data-loading=""><span class="ladda-label">
+                        Previous
+                    </span><span class="ladda-spinner"><div class="" role="progressbar" style="position: absolute; width: 0px; z-index: auto; left: auto; top: auto;"><div style="position: absolute; top: -1px; opacity: 0.25; animation: 1s linear 0s infinite normal none running opacity-100-25-0-12;"><div style="position: absolute; height: 3px; background: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; border-radius: 1px;"></div></div><div style="position: absolute; top: -1px; opacity: 0.25; animation: 1s linear 0s infinite normal none running opacity-100-25-1-12;"><div style="position: absolute; height: 3px; background: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; border-radius: 1px;"></div></div><div style="position: absolute; top: -1px; opacity: 0.25; animation: 1s linear 0s infinite normal none running opacity-100-25-2-12;"><div style="position: absolute; height: 3px; background: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; border-radius: 1px;"></div></div><div style="position: absolute; top: -1px; opacity: 0.25; animation: 1s linear 0s infinite normal none running opacity-100-25-3-12;"><div style="position: absolute; height: 3px; background: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; border-radius: 1px;"></div></div><div style="position: absolute; top: -1px; opacity: 0.25; animation: 1s linear 0s infinite normal none running opacity-100-25-4-12;"><div style="position: absolute; height: 3px; background: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; border-radius: 1px;"></div></div><div style="position: absolute; top: -1px; opacity: 0.25; animation: 1s linear 0s infinite normal none running opacity-100-25-5-12;"><div style="position: absolute; height: 3px; background: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; border-radius: 1px;"></div></div><div style="position: absolute; top: -1px; opacity: 0.25; animation: 1s linear 0s infinite normal none running opacity-100-25-6-12;"><div style="position: absolute; height: 3px; background: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; border-radius: 1px;"></div></div><div style="position: absolute; top: -1px; opacity: 0.25; animation: 1s linear 0s infinite normal none running opacity-100-25-7-12;"><div style="position: absolute; height: 3px; background: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; border-radius: 1px;"></div></div><div style="position: absolute; top: -1px; opacity: 0.25; animation: 1s linear 0s infinite normal none running opacity-100-25-8-12;"><div style="position: absolute; height: 3px; background: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; border-radius: 1px;"></div></div><div style="position: absolute; top: -1px; opacity: 0.25; animation: 1s linear 0s infinite normal none running opacity-100-25-9-12;"><div style="position: absolute; height: 3px; background: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; border-radius: 1px;"></div></div><div style="position: absolute; top: -1px; opacity: 0.25; animation: 1s linear 0s infinite normal none running opacity-100-25-10-12;"><div style="position: absolute; height: 3px; background: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; border-radius: 1px;"></div></div><div style="position: absolute; top: -1px; opacity: 0.25; animation: 1s linear 0s infinite normal none running opacity-100-25-11-12;"><div style="position: absolute; height: 3px; background: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; border-radius: 1px;"></div></div></div></span><div class="ladda-progress" style="width: 0px;"></div></a>
+                </div>
+
+                <div class="col-md-1 col-xs-3" style="padding:0 0 0 10px;">
+                    <a href="https://oas.lpu.in/LiveTest#" data-style="slide-down" id="btnFlag" class="flag-btn" onclick="SaveTestResponse(&#39;Flag&#39;,this)" style="display: none;">
+                        <span class="glyphicon glyphicon-flag" style="margin-right: 5px; color:#fff"></span>Flag
+                    </a>
+                </div>
+
+                
+
+                <div class="col-md-1 col-xs-2" style="padding:0;">
+                    <a href="https://oas.lpu.in/LiveTest#" data-style="slide-down" id="btnNext" class="next-btn" onclick="SaveTestResponse(&#39;Next&#39;,this)" style="display: none;">Next</a>
+                </div>
+
+                <div class="col-md-9 col-xs-4" style="padding:0 15px 0 0;">
+                    <ul class="nav pull-right">
+                        <li>
+                            <a href="https://oas.lpu.in/LiveTest#" id="endTest" data-style="slide-down" class="end-btn" onclick="ConfirmEndTest(this);">End Test</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+
+</div>
+
+
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header" style="background-color: #1abc9c">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h4 class="modal-title" style="color: white; text-align: left">Test Instructions</h4>
+            </div>
+            <div class="modal-body" id="TestInstructionsContent">
+
+            <div class="TIrowBottom">
+                <div class="col-md-6">
+                    <div class="TIrowBottom">
+                        <div class="col-md-12" style="padding:0;">
+                            <h2 class="PItextColorHeading">Test Instructions</h2>
+
+                        </div>
+                    </div>
+                    <div class="TIrowBottom">
+                        <div class="col-md-6 col-xs-6" style="padding:0;">
+                            <i class="glyphicon glyphicon-star"></i><strong style="margin-left: 5px;" class="PItextColor">Test Name :</strong>
+                        </div>
+                        <div class="col-md-6 col-xs-6" id="TestName" style="margin-bottom:5px; padding:0;">Test Your Skills on HTML and Javascript</div>
+                    </div>
+
+                      <div class="TIrowBottom" style="display:none">
+                        <div class="col-md-6 col-xs-6" style="padding:0;">
+                            <i class="glyphicon glyphicon-star"></i><strong style="margin-left: 5px;" class="PItextColor">Set :</strong>
+                        </div>
+                        <div class="col-md-6 col-xs-6" id="SetName" style="margin-bottom:5px; padding:0;">1</div>
+                    </div>
+
+                    <div class="TIrowBottom" id="noquestions" style="">
+                        <div class="col-md-6 col-xs-6" style="padding:0;">
+                            <i class="glyphicon glyphicon-star"></i><strong style="margin-left: 5px;" class="PItextColor">No of Questions :</strong>
+                        </div>
+                        <div class="col-md-6 col-xs-6" id="Questions" style="margin-bottom:5px; padding:0;">45</div>
+                    </div>
+
+                    <div class="TIrowBottom">
+                        <div class="col-md-6 col-xs-6" style="padding:0;">                           
+                            <i class="glyphicon glyphicon-star"></i><strong style="margin-left: 5px;" class="PItextColor">Allocated Time :</strong>
+                        </div>
+                        <div class="col-md-6 col-xs-6" id="AllocatedTime" style="margin-bottom:5px; padding:0;">60 Minutes</div>
+                    </div>
+
+                    <div class="TIrowBottom">
+                        <div class="col-md-6 col-xs-6" style="padding:0;">
+                            <i class="glyphicon glyphicon-star"></i><strong style="margin-left: 5px;" class="PItextColor">Negative Marking :</strong>
+                        </div>
+                        <div class="col-md-6" col-xs-6"="" id="NegativeMarking" style="margin-bottom:5px; padding:0;">NA</div>
+                    </div>
+
+                    <div class="TIrowBottom" style="display:none">
+                        <div class="col-md-6 col-xs-6" style="padding:0;">
+                            <i class="glyphicon glyphicon-star"></i><strong style="margin-left: 5px;" class="PItextColor">Course Code :</strong>
+                        </div>
+                        <div class="col-md-6 col-xs-6" id="CourseCode" style="margin-bottom:5px; padding:0">NA</div>
+                    </div>
+
+                    <div class="col-md-12" style="padding:0;">
+                        <h4 class="PItextColorHeading">Instructions</h4>
+                        <div id="Instructions">E-certificates will be issued to the students who have either login time&gt;= 30 minutes or marks&gt;=25 in the competition.</div>
+                    </div>
+
+                </div>
+
+                <center>
+                    <div class="col-md-6">
+                        <img src="./OAS-Lovely Professional University_files/Logo.png" class="img-responsive">
+                    </div>
+                </center>
+</div>
+
+            
+            <div class="col-md-6" style="padding:0;">                
+                
+                <div class="col-md-12">
+                    <h4 class="PItextColorHeading">Navigation Tools</h4>
+                </div>
+                 
+                <div class="TIrowBottom">
+                    <div class="col-md-12" style="margin-bottom:20px; padding:0;">
+                        <div class="col-md-3" style="padding-bottom:5px;">
+                            <span class="btn btn-success">Next &gt;</span>
+                        </div>
+                        <div class="col-md-9 text-justify">Next: By clicking Next button the next question will appear to the User.</div>
+                    </div>
+                </div>
+
+                <div class="TIrowBottom" id="PrevRow" style="display: none;">
+                    <div class="col-md-12" style="margin-bottom:20px; padding:0;">
+                        <div class="col-md-3" style="padding-bottom:5px;">
+                            <span class="btn btn-success">&lt; Previous</span>
+                        </div>
+                        <div class="col-md-9 text-justify">Previous: By clicking Previous button the previous question will appear to the User.</div>
+                    </div>
+                </div>
+
+                <div class="TIrowBottom" id="FlagRow" style="display: none;">
+                    <div class="col-md-12" style="margin-bottom:20px; padding:0;">
+                        <div class="col-md-3" style="padding-bottom:5px;">
+                            <span class="btn btn-warning glyphicon glyphicon-flag">Flag</span>
+                        </div>
+                        <div class="col-md-9 text-justify">Flag: To flag a question (To Respond Later), choose an answer and click on flag button.</div>
+                    </div>
+                </div>
+
+                <div class="TIrowBottom">
+                    <div class="col-md-12" style="margin-bottom:20px; padding:0;">
+                        <div class="col-md-3" style="padding-bottom:5px;">
+                            <span class="btn btn-danger">End Test</span>
+                        </div>
+                        <div class="col-md-9 text-justify">End Test: By clicking End Test Button the test gets submitted.</div>
+                    </div>
+                </div>
+
+                <div id="checkBoxRow" style="display: none;">
+                    <div class="col-md-12" style="padding-bottom:80px;">
+
+                        <input id="checkbox" type="checkbox" name="checkbox">
+                        <i></i>
+                        <strong>I have gone through the instructions, understood legends and will hereby follow the same.</strong>
+                        <br>
+                        <p id="mphasisAlertMsg" style="display: none; color: red; font-family: arial;">Please accept the above declaration to proceed.</p>
+                    </div>
+                </div>
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div id="overlay1" style="display: none; z-index: 8888; width: 100%; height: 100%; position: fixed; left: 0px; top: 0px; background-color: #000; -moz-opacity: 0.6; opacity: 0.6; -webkit-opacity: 0.8; filter: alpha(opacity=80);">
+    
+        <div class="main">
+
+
+    <div class="small1">
+      <div class="small ball smallball1"></div>
+      <div class="small ball smallball2"></div>
+      <div class="small ball smallball3"></div>
+      <div class="small ball smallball4"></div>
+    </div>
+
+
+    <div class="small2">
+      <div class="small ball smallball5"></div>
+      <div class="small ball smallball6"></div>
+      <div class="small ball smallball7"></div>
+      <div class="small ball smallball8"></div>
+    </div>
+
+    <div class="bigcon">
+      <div class="big ball"></div>
+    </div>
+
+
+  </div>
+            </div>
+
+
+
+
+
+<div><div class="sweet-overlay" tabindex="-1" style="opacity: 1.3; display: block;"></div><div class="sweet-alert showSweetAlert visible" tabindex="-1" data-has-cancel-button="false" data-has-confirm-button="true" data-allow-ouside-click="false" data-has-done-function="false" data-timer="null" style="display: block; margin-top: -200px;"><div class="icon error animateErrorIcon" style="display: block;"><span class="x-mark animateXMark"><span class="line left"></span><span class="line right"></span></span></div><div class="icon warning" style="display: none;"> <span class="body"></span> <span class="dot"></span> </div> <div class="icon info" style="display: none;"></div> <div class="icon success" style="display: none;"> <span class="line tip"></span> <span class="line long"></span> <div class="placeholder"></div> <div class="fix"></div> </div> <div class="icon custom" style="display: none;"></div> <h2>Warning</h2><p class="lead text-muted" style="display: block;">Test Warning 2 : During the Test You are not allowed to Navigate to any Other Window, Your Test Will be closed and auto submitted.</p><p><button class="cancel btn btn-lg btn-default" tabindex="2" style="display: none;">Cancel</button> <button class="confirm btn btn-lg btn-error" tabindex="1" style="display: inline-block;">OK</button></p></div></div><div><div class="sweet-overlay" tabindex="-1"></div><div class="sweet-alert" tabindex="-1"><div class="icon error"><span class="x-mark"><span class="line left"></span><span class="line right"></span></span></div><div class="icon warning"> <span class="body"></span> <span class="dot"></span> </div> <div class="icon info"></div> <div class="icon success"> <span class="line tip"></span> <span class="line long"></span> <div class="placeholder"></div> <div class="fix"></div> </div> <div class="icon custom"></div> <h2>Title</h2><p class="lead text-muted">Text</p><p><button class="cancel btn btn-lg" tabindex="2">Cancel</button> <button class="confirm btn btn-lg" tabindex="1">OK</button></p></div></div></body></html>
